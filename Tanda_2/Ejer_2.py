@@ -18,4 +18,7 @@ class GestorCSV:
     # olimpiadas.to_csv('Olimpiadas.csv', index = False)
 
 
+kraken
+
+
 
