@@ -66,7 +66,23 @@ class Archivo:
             else:
                 print("Se ha movido el archivo %s correctamente al directorio %s" % (nombre, rutaDestino))
 
+        if num == 5:
+            print("Escriba la ruta del archivo que desea eliminar")
+            ruta = input()
+            if os.path.exists(ruta):
+                try:
+                    os.remove(ruta)
+                    print("Archivo borrado")
+                except OSError as IsADirectoryError:
+                    try:
+                        os.rmdir(ruta)
+                        print("Carpeta borrada")
+                    except OSError:
+                        print("No se puede borrar carpetas con contenido dentro")
 
+            else:
+                print("La ruta no existe")
 
+    print("Que tenga un buen dia")
 
 
