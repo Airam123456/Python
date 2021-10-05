@@ -6,7 +6,6 @@ class GestorCSV:
 
     num = 0
     while num != 5:
-        datos = pd.read_csv("solo50.csv")
         print("Seleccione una opción escribiendo el número")
         print("1: Generar fichero csv de olimpiadas")
         print("2: Buscar deportista")
@@ -18,15 +17,13 @@ class GestorCSV:
         if num == 1:
             olimpiadas = datos[['Year', 'Games', 'Season', 'City']].drop_duplicates()
             print(list(olimpiadas))
-            olimpiadas.to_csv('Olimpiadas.csv', index = False)
+            olimpiadas.to_csv('olimpiadas.csv', index = False)
 
         if num == 2:
             print("Introduzca el nombre a buscar: ")
             nombre = input()
-            if [datos.Name == nombre]:
-                print(datos[datos.Name == nombre])
-            else:
-                print("hey")
+            datos = pd.read_csv("athlete_events.csv")
+            print(datos.loc[datos['Name'] == nombre])
 
         if num == 3:
             print("Introduzca el deporte a buscar:")
@@ -36,9 +33,11 @@ class GestorCSV:
             print("Introduzca temporada Summer/Winter:")
             temporada = input()
 
-            if [datos.Sport == deporte] and [datos.Year == anio] and [datos.Season == temporada]:
-                print(datos[['Sport', 'Year', 'Season']].drop_duplicates())
-                print(datos[['Name', 'Event', 'Medal']])
+            datos = pd.read_csv("athlete_events.csv")
+            olimpiadas = datos.loc[(datos['Sport'] == deporte) & (datos['Year'] == anio) & (datos['Season'] == temporada)]
+            print(olimpiadas[['Games', 'City', 'Sport']].iloc[0])
+            print(olimpiadas[['Name', 'Event', 'Medal']])
+
 
 
 
