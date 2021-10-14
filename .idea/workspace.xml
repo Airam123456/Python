@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95b75cfe-df20-4a1a-bb79-155015169a1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tanda_2/athlete_events.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tanda_2/olimpiadas.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanda_2/Ejer_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_2/Ejer_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanda_2/Ejer_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_2/Ejer_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanda_2/Olimpiadas.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
