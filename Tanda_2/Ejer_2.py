@@ -42,6 +42,8 @@ class GestorCSV:
             except IndexError:
                 print("No encontrtado")
 
+        if num == 4:
+
 
 
 
