@@ -1,10 +1,10 @@
-import  csv
+
 import pandas as pd
 
 class GestorCSV:
 
     num = 0
-    while num != 5:
+    while num != 5: #
         print("Seleccione una opción escribiendo el número")
         print("1: Generar fichero csv de olimpiadas")
         print("2: Buscar deportista")
@@ -16,7 +16,7 @@ class GestorCSV:
         if num == 1:
             datos = pd.read_csv("athlete_events.csv")
             olimpiadas = datos[['Games', 'Year', 'Season', 'City']].drop_duplicates()
-            olimpiadas.to_csv('olimpiadas.csv', index = False)
+            olimpiadas.to_csv('olimpiadas.csv')
             print("Archivo creado")
 
         if num == 2:
@@ -42,7 +42,7 @@ class GestorCSV:
             except IndexError:
                 print("No encontrtado")
 
-        if num == 4:
+
 
 
 

@@ -1,137 +1,82 @@
 import xml.etree.ElementTree as ET
 import pickle
 
-# Clase Olimpiada
 class Olimpiada:
-    # Constructor que inicaliza los datos de una Olimpiada
-    def __init__(self, anio, temporada, juegos, ciudad):
+    def __init__(self, anio, juegos, temporada, ciudad):
         self.anio = anio
-        self.temporada = temporada
         self.juegos = juegos
+        self.temporada = temporada
         self.ciudad = ciudad
 
-    # Metodo para ver por pantalla la informacion de la olimpiada
-    def verOlimpiada(self):
-        print(self.anio + ", " + self.juegos + ", " + self.temporada + ", " + self.ciudad)
+    def __str__(self):
+        return "Año: " + self.anio + "\n Juegos: " + self.juegos + "\n Temporada: " + self.temporada + "\n Ciudad: " + self.ciudad
 
-# Metodo que saca un menu por pantalla y devuelve la respuesta introducida
-def cargarMenu():
-    print("""
-¿Que quieres hacer?
-1. Crear fichero serializable de olimpiadas
-2. Añadir edicion olimpica
-3. Buscar olimpiadas por sede
-4. Eliminar edicion olimpica
-5. Ver todas las olimpiadas
-6. Salir del programa
-        """)
-    return int(input())
+num = 0
+while num != 5:
+    print("Seleccione una opción escribiendo el número")
+    print("1: Crear fichero serializable de olimpiadas")
+    print("2: Añadir edición olímpica")
+    print("3: Buscar olimpiadas por sede")
+    print("4: Eliminar edición olímpica")
+    print("5: Salir del programa")
+    num = int(input())
 
-# Metodo que crea un archivo binario con objetos de clase Olimpiada
-def crearFichero():
-    tree = ET.parse('olimpiadas.xml') # Creamos un parser para leer el xml
-    root = tree.getroot()
-    with open('olimpiadas.pickle', 'wb') as f: # Abrimos el archivo como "escritura" y "binario"
-        for hijo in root: # Por cada linea del xml, creamos un obejto olimpiada y lo cargamos al archivo binario
-            olimpiada = []
-            olimpiada.append(hijo.attrib['year'])
-            for nieto in hijo:
-                olimpiada.append(nieto.text)
-            olimp = Olimpiada(olimpiada[0], olimpiada[1], olimpiada[2], olimpiada[3])
-            pickle.dump(olimp, f)
-
-# Metodo que añade una nueva Olimpiada al archivo
-def aniadirEdicion():
-    # Pedimos los datos
-    print("Año de las olimpiadas: ")
-    anio = input()
-    print("Temporada de las olimpiadas: ")
-    temporada = input()
-    print("Ciudad de las olimpiadas: ")
-    ciudad = input()
-    juegos = anio + " " + temporada
-
-    olimpiadas = [] # Lista para guardar las limpiadas
-    with open('olimpiadas.pickle', 'rb') as f: # Abrimos el archivo en modo "lectura" y "binario"
-        while True: # Hacemos un bucle infinito
-            try:
-                # Por cada linea, crea una Olimpiada y la guarda en la lista
-                olimpiada = pickle.load(f)
-                olimpiadas.append(olimpiada)
-            except EOFError: # Cuando se quede sin lineas, va a dar una excepcion EOFError
-                # Aprovechamos la excepcion para crear la Olimpiada con los datos que ha introducido el usuario
-                olimpiada = Olimpiada(anio, juegos, temporada, ciudad)
-                olimpiadas.append(olimpiada)
-                # Salimos del bucle
-                break
-
-    # Reescribimos el archivo binario con la nueva Olimpiada
-    with open('olimpiadas.pickle', 'wb') as f:
-        for olimpiada in olimpiadas:
-            pickle.dump(olimpiada, f)
-
-# Metodo que visualiza las Olimpiadas de una ciudad
-def buscarOlimpiada():
-    # Pedimos los datos
-    print("Las olimpiadas de que ciudad quieres visualizar?")
-    ciudad = input()
-    with open('olimpiadas.pickle', 'rb') as f:
-        while True: # Hacemos un bucle infinito
-            try: # Si la ciudad coincide, visualiza la Olimpiada
-                olimpiada = pickle.load(f)
-                if ciudad.lower() in olimpiada.ciudad.lower():
-                   olimpiada.verOlimpiada()
-            except EOFError: # Si salta la excepcion EOFError, salimos del bucle
-                break
-
-# Metodo que elimina una Olimpiada
-def eliminarEdicion():
-    # Pedimos los datos
-    print("Introduce el año de la olimpiada que quieras eliminar")
-    anio = input()
-    print("Introduce la temporada de la olimpiada que quieras elimiar")
-    temporada = input()
-
-    olimpiadas = [] # Hacemos una lista para guardas las olimpiadas
-    with open('olimpiadas.pickle', 'rb') as f:
-        while True:
-            try: # Guardamos las olimpiadas del archivo en la lista
-                olimpiada = pickle.load(f)
-                olimpiadas.append(olimpiada)
-            except EOFError: # Si salta la excepcion EOFError, salimos del bucle
-                break
-
-    # Reescribimos el archivo sin añadir la Olimpiada que el usuario quiere eliminar
-    with open('olimpiadas.pickle', 'wb') as f:
-        for olimpiada in olimpiadas:
-            if anio != olimpiada.anio and temporada.lower() != olimpiada.temporada.lower():
+    if num == 1: #Aqui nuevamente necesite ayuda de Raul y Ander porque no conseguia serializar de tal manera que los datos
+                # fuesen correctos, ellos me dijeron que debia meter un for dentro de otro con el objetivo de sacar a los hijos.
+        parse = ET.parse('olimpiadas.xml')
+        root = parse.getroot()
+        with open('olimpiadas.pickle', 'wb') as f:
+            for padre in root:
+                olimpicList = []
+                olimpicList.append(padre.attrib['year'])
+                for hijo in padre:
+                    olimpicList.append(hijo.text)
+                olimpiada = Olimpiada(olimpicList[0], olimpicList[1], olimpicList[2], olimpicList[3])
                 pickle.dump(olimpiada, f)
 
-# Metodo que recorre el fichero y lo visualiza
-def verFichero():
-    with open('olimpiadas.pickle', 'rb') as f:
-        while True:
+    if num == 2:
+        print("Introduzca datos sobre la olimpiada ")
+        anio = input("Año de celebración: ")
+        juegos = input("Juegos: ")
+        temporada = input("Temporada: ")
+        ciudad = input("Ciudad: ")
+        olimpiada = Olimpiada(anio, juegos, temporada, ciudad)
+        with open('olimpiadas.pickle', 'ab') as f:
+            pickle.dump(olimpiada, f)
+
+    if num == 3:
+        ciudad = input("Ciudad que desea buscar: ")
+        with open('olimpiadas.pickle', 'rb') as f:
+            while True:
+                try:
+                    olimpiada = pickle.load(f)
+                    if (olimpiada.ciudad == ciudad):
+                        print(olimpiada.__str__())
+                except EOFError:
+                    break
+
+    if num == 4:
+        print("Introduzca datos de la edición olímpica a eliminar")
+        anio = input("Año de celebración: ")
+        temporada = input("Temporada: ")
+        olimpicList = []
+        eliminada = False
+        with open('olimpiadas.pickle', 'rb') as f:
             try:
                 olimpiada = pickle.load(f)
-                olimpiada.verOlimpiada()
+                if olimpiada.year != anio and olimpiada.ciudad != ciudad:
+                    olimpicList.append(olimpiada)
+                else:
+                    eliminada = True
             except EOFError:
                 break
 
-# Hacemos un bucle que vaya cargando el menu hasta que se introduce el 6
-resp = cargarMenu()
-while resp != 6:
-    print()
-    if resp == 1:
-        crearFichero()
-    elif resp == 2:
-        aniadirEdicion()
-    elif resp == 3:
-        buscarOlimpiada()
-    elif resp == 4:
-        eliminarEdicion()
-    elif resp == 5:
-        verFichero()
-    else:
-        print("No existe esa opcion")
-    resp = cargarMenu()
-exit("Adios")
+            with open('data/objetosOlimpiada.pickle', 'wb') as writeHandler:
+                for olimpiada in olimpicList:
+                    pickle.dump(olimpiada, f)
+
+        if eliminada:
+            print("Eliminacion correcta")
+        else:
+            print("No se ha encontrado una olimpiada con esos datos")
+

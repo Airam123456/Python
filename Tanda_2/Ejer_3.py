@@ -1,190 +1,108 @@
-# -*- coding: utf-8 -*-
+import pandas as pd
 import csv
-import lxml.etree as ET
-from xml.sax import make_parser
-from xml.sax.handler import ContentHandler
-import cgi
+import xml.sax
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
-class XMLHandler(ContentHandler):
+
+class XMLHandler(xml.sax.ContentHandler):
+
     def __init__(self):
-        self.n = 0;
-        self.esGamesElement = False;
+        self.Datos = False
 
     def startElement(self, name, attrs):
-        if name == 'olimpiada':
-            self.olimpiadaYear = attrs.get('year', "")
-        elif name == 'juegos':
-            self.olimpiadaGames = "";
-            self.esGamesElement = True;
-        return
+        if attrs.getNames() == ['year']:
+            print("Año: " + attrs['year'])
+        if name == "juegos":
+            self.Datos = True
 
-    def characters(self, ch):
-        if self.esGamesElement == True:
-            self.olimpiadaGames += ch
+    def characters(self, cha):
+        if self.Datos:
+            print("Juegos: " + cha)
 
     def endElement(self, name):
-        self.esGamesElement = False;
-        if name == 'olimpiada':
-            self.n = self.n + 1;
-            print("Olimpiada Número " + str(self.n))
-            print("Juegos: " + self.olimpiadaGames + "\nAño: " + self.olimpiadaYear + "\n")
+        if name == "juegos":
+            self.Datos = False
 
-class FicherosEJ3:
-    def main(self):
-        respuesta = 0
-        respuestaValida = False
-        while respuestaValida == False:
-            respuesta = input(
-                "¿Qué deseas hacer?\n1. Crear XML de olimpiadas\n2. Crear XML de deportistas\n3. Listado de olimpiadas\n4. Salir del programa\n")
-            try:
-                respuesta = int(respuesta)
-                if respuesta < 1 or respuesta > 4:
-                    print("El número introducido escapa del rango (1-5)")
-                else:
-                    respuestaValida = True
-            except ValueError:
-                print("Valor no númerico introducido")
-        if respuesta == 1:
-            self.generarOlimpiadasXML()
-        elif respuesta == 2:
-            self.generarDeportistasXML()
-        elif respuesta == 3:
-            self.buscarListadoOlimpiadas()
-        else:
-            print("Programa Finalizado")
+num = 0
+while num != 4:
+    print("Seleccione una opción escribiendo el número")
+    print("1: Crear XML de olimpiadas")
+    print("2: Crear XML de deportistas")
+    print("3: Listado de olimpiadas")
+    print("4: Salir del programa")
+    num = int(input())
 
-    def generarOlimpiadasXML(self):
-        # Conseguir año mínimo y máximo
-        anioMinimo = 3000
-        anioMaximo = 0
-        with open('olimpiadas.csv', newline='') as archivoEntrada:
-            reader = csv.reader(archivoEntrada)
-            headerTerminado = False
+    if num == 1:
+        olimpicList = []  # La idea de hacerlo de esta forma con  una lista me la dio Raul porque
+                            # yo estaba usando pandas y estaba atascado
+
+        with open('olimpiadas.csv') as entrada:
+            reader = csv.reader(entrada, delimiter = ',')
+            finalizado = False
             for row in reader:
-                if (headerTerminado == False):
-                    headerTerminado = True
+                if not finalizado:
+                    finalizado = True
                 else:
-                    num = int(float(row[1]))
-                    if (num > anioMaximo):
-                        anioMaximo = num
-                    elif (num < anioMinimo):
-                        anioMinimo = num
+                    olimpicList.append([row[2], row[1], row[3], row[4]])
 
-        root = ET.Element('olimpiadas')
-        anio = anioMinimo
-        while (anio <= anioMaximo):
-            temporada = "Winter"
-            tempNum = 1
-            while (tempNum <= 2):
-                if (tempNum == 2):
-                    temporada = "Summer"
+        root = ET.Element('olimpiadas')  # Root del xml
+        for row in olimpicList:  # Por cada olimpiada, le pone el atributo y crea los hijos
+            olimpiada = ET.SubElement(root, 'olimpiada')
+            olimpiada.set('year', row[0])
+            juegos = ET.SubElement(olimpiada, 'juegos')
+            juegos.text = row[1]
+            temporada = ET.SubElement(olimpiada, 'temporada')
+            temporada.text = row[2]
+            ciudad = ET.SubElement(olimpiada, 'ciduad')
+            ciudad.text = row[3]
 
-                with open('olimpiadas.csv', newline='') as archivoEntrada:
-                    reader = csv.reader(archivoEntrada)
-                    headerTerminado = False
-                    for row in reader:
-                        if (headerTerminado == False):
-                            headerTerminado = True
-                        else:
-                            if (anio == int(float(row[1])) and temporada == row[2]):
-                                olimpiada = ET.SubElement(root, 'olimpiada')
-                                olimpiada.set('year', row[1])
-                                juegos = ET.SubElement(olimpiada, 'juegos')
-                                juegos.text = row[0]
-                                temporada = ET.SubElement(olimpiada, 'temporada')
-                                temporada.text = row[2]
-                                ciudad = ET.SubElement(olimpiada, 'ciudad')
-                                ciudad.text = row[3]
-                tempNum = tempNum + 1
-            anio = anio + 1
+        xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent="   ")
+        with open("olimpiadas.xml", "w") as f:
+            f.write(xmlstr)
 
-        archivoSalida = open("olimpiadas.xml", "w")
-        archivoSalida.write(ET.tostring(root, pretty_print=True).decode("utf-8"))
-        archivoSalida.close()
-        self.main()
-
-    def generarDeportistasXML(self):
+    if num == 2:
         root = ET.Element('deportistas')
-        with open('athlete_events.csv', newline='') as archivoEntrada:
-            reader = csv.reader(archivoEntrada)
-            identificador = -1
-            headerTerminado = False
-
-            participaciones = "ParticipaciónRecipiente"
+        with open('athlete_events.csv') as entrada:
+            reader = csv.reader(entrada, delimiter = ',')
+            finalizado = False
             for row in reader:
-                if (headerTerminado == False):
-                    headerTerminado = True
+                if not finalizado:
+                    finalizado = True
                 else:
-                    if (str(identificador) == row[0]):
-                        # Nos encontramos en el mismo deportista
-                        for deporte in participaciones.findall('deporte'):
-                            if (deporte.get('nombre') == row[12]):
-                                # Este deportista ya ha participado en ese deporte
-                                participacion = ET.SubElement(deporte, 'participacion')
-                                participacion.set('edad', row[3])
-                                equipo = ET.SubElement(participacion, 'equipo')
-                                equipo.text = row[11]
-                                juegos = ET.SubElement(participacion, 'juegos')
-                                juegos.text = row[8]
-                                evento = ET.SubElement(participacion, 'evento')
-                                evento.text = row[13]
-                                if (row[14] != 'NA'):
-                                    medalla = ET.SubElement(participacion, 'medalla')
-                                    medalla.text = row[14]
-                            else:
-                                # Este deportista no ha participado en ese deporte
-                                deporte = ET.SubElement(participaciones, 'deporte')
-                                deporte.set('nombre', row[12])
-                                participacion = ET.SubElement(deporte, 'participacion')
-                                participacion.set('edad', row[3])
-                                equipo = ET.SubElement(participacion, 'equipo')
-                                equipo.text = row[11]
-                                juegos = ET.SubElement(participacion, 'juegos')
-                                juegos.text = row[8]
-                                evento = ET.SubElement(participacion, 'evento')
-                                evento.text = row[13]
-                                if (row[14] != 'NA'):
-                                    medalla = ET.SubElement(participacion, 'medalla')
-                                    medalla.text = row[14]
-                    else:
-                        # Nos encontramos en otro nuevo deportista
-                        identificador = row[0]
-                        deportista = ET.SubElement(root, 'deportista')
-                        deportista.set('id', row[0])
-                        nombre = ET.SubElement(deportista, 'nombre')
-                        nombre.text = row[1]
-                        sexo = ET.SubElement(deportista, 'sexo')
-                        sexo.text = row[2]
-                        altura = ET.SubElement(deportista, 'altura')
-                        altura.text = row[4]
-                        peso = ET.SubElement(deportista, 'peso')
-                        peso.text = row[5]
-                        participaciones = ET.SubElement(deportista, 'participaciones')
-                        deporte = ET.SubElement(participaciones, 'deporte')
-                        deporte.set('nombre', row[12])
-                        participacion = ET.SubElement(deporte, 'participacion')
-                        participacion.set('edad', row[3])
-                        equipo = ET.SubElement(participacion, 'equipo')
-                        equipo.text = row[11]
-                        juegos = ET.SubElement(participacion, 'juegos')
-                        juegos.text = row[8]
-                        evento = ET.SubElement(participacion, 'evento')
-                        evento.text = row[13]
-                        if (row[14] != 'NA'):
-                            medalla = ET.SubElement(participacion, 'medalla')
-                            medalla.text = row[14]
-        archivoSalida = open("deportistas.xml", "w")
-        archivoSalida.write(ET.tostring(root, pretty_print=True).decode("utf-8"))
-        archivoSalida.close()
-        self.main()
+                    id = row[0]
+                    deportista = ET.SubElement(root, 'deportista')
+                    deportista.set('id', row[0])
+                    nombre = ET.SubElement(deportista, 'nombre')
+                    nombre.text = row[1]
+                    sexo = ET.SubElement(deportista, 'sexo')
+                    sexo.text = row[2]
+                    altura = ET.SubElement(deportista, 'altura')
+                    altura.text = row[4]
+                    peso = ET.SubElement(deportista, 'peso')
+                    peso.text = row[5]
+                    participaciones = ET.SubElement(deportista, 'participaciones')
+                    deporte = ET.SubElement(participaciones, 'deporte')
+                    deporte.set('nombre', row[12])
+                    participacion = ET.SubElement(deporte, 'participacion')
+                    participacion.set('edad', row[3])
+                    equipo = ET.SubElement(participacion, 'equipo')
+                    equipo.text = row[11]
+                    juegos = ET.SubElement(participacion, 'juegos')
+                    juegos.text = row[8]
+                    evento = ET.SubElement(participacion, 'evento')
+                    evento.text = row[13]
+                    if (row[14] != 'NA'):
+                        medalla = ET.SubElement(participacion, 'medalla')
+                        medalla.text = row[14]
 
-    def buscarListadoOlimpiadas(self):
-        FormData = cgi.FieldStorage()
-        parser = make_parser()
+        xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent="   ")
+        with open("deportistas.xml", "w") as f:
+            f.write(xmlstr)
+
+    if num == 3:
         handler = XMLHandler()
+        parser = xml.sax.make_parser()
+        parser.setFeature(xml.sax.handler.feature_namespaces, 0)
         parser.setContentHandler(handler)
-        parser.parse(open('olimpiadas.xml'))
-        self.main()
-
-ej3 = FicherosEJ3()
-ej3.main()
+        parser.parse("olimpiadas.xml")
