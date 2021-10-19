@@ -63,7 +63,7 @@ while num != 4:
 
     if num == 2:
         root = ET.Element('deportistas')
-        with open('athlete_events.csv') as entrada:
+        with open('../Tanda_3/athlete_events.csv') as entrada:
             reader = csv.reader(entrada, delimiter = ',')
             finalizado = False
             for row in reader:

@@ -14,7 +14,7 @@ class GestorCSV:
         num = int(input())
 
         if num == 1:
-            datos = pd.read_csv("athlete_events.csv")
+            datos = pd.read_csv("../Tanda_3/athlete_events.csv")
             olimpiadas = datos[['Games', 'Year', 'Season', 'City']].drop_duplicates()
             olimpiadas.to_csv('olimpiadas.csv')
             print("Archivo creado")
@@ -22,7 +22,7 @@ class GestorCSV:
         if num == 2:
             print("Introduzca el nombre a buscar: ")
             nombre = input()
-            datos = pd.read_csv("athlete_events.csv")
+            datos = pd.read_csv("../Tanda_3/athlete_events.csv")
             print(datos.loc[datos['Name'] == nombre])
 
         if num == 3:
@@ -34,7 +34,7 @@ class GestorCSV:
                 print("Introduzca temporada Summer/Winter:")
                 temporada = input()
 
-                datos = pd.read_csv("athlete_events.csv")
+                datos = pd.read_csv("../Tanda_3/athlete_events.csv")
 
                 olimpiadas = datos.loc[(datos['Sport'] == deporte) & (datos['Year'] == anio) & (datos['Season'] == temporada)]
                 print(olimpiadas[['Games', 'City', 'Sport']].iloc[0])
