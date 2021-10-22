@@ -78,9 +78,16 @@ def crearBBDD():
                         numEvento += 1
 
                 numEquipo = 1
+                for equipoParticipacion in dicEquipo():
+                    if(equipoParticipacion == equipo):
+                        break
+                    else:
+                        numEquipo += 1
 
-                participacion = []
-
+                participacion = [numDeportista, numEvento, numEquipo, row[3], row[14]]
+                if participacion is not dicParticipacion.values():
+                    dicParticipacion[idParticipacion] = participacion
+                    idParticipacion += 1
 
     print(dicDeportes)
 
