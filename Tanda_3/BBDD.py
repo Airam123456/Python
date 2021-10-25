@@ -2,93 +2,134 @@ import mysql.connector
 import csv
 
 
-def crearBBDD():
-    dicOlimpiadas = {}
-    dicEventos = {}
-    dicParticipacion = {}
-    dicDeportes = {}
-    dicDeportistas = {}
-    dicEquipo = {}
+class ManejoConectores:
 
-    with open('recortada.csv') as entrada:
-        reader = csv.reader(entrada, delimiter=',')
-        idOlimpiada = 1
-        idEvento = 1
-        idParticipacion = 1
-        idDeporte = 1
-        idDeportista = 1
-        idEquipo = 1
-        firstRow = 0
+    def conectarBBDD(self):
 
-        for row in reader:
-            if firstRow == 0:
-                firstRow += 1
-            else:
-                olimpiada = [row[8], row[9], row[10], row[11]]
-                if olimpiada is not dicOlimpiadas.values():
-                    dicOlimpiadas[idOlimpiada] = olimpiada
-                    idOlimpiada += 1
+        try:
+            conectordb = mysql.connector.connect(
+                host="localhost",
+                user="admin",
+                password="password",
+                database="olimpiadas"
+            )
+            print("Conexion con la base de datos")
+        except:
+            print("No se ha podido establecer la coneccion")
 
-                deporte = [row[12]]
-                if deporte is not dicDeportes.values():
-                    dicDeportes[idDeporte] = deporte
-                    idDeporte += 1
+    def borrarBBDD(self, conectordb):
 
-                deportista = [row[1], row[2], row[4], row[5]]
-                if deportista is not dicDeportistas.values():
-                    dicDeportistas[idDeportista] = deportista
-                    idDeportista += 1
+        mycursor = conectordb.cursor()
+        query = ["DROP TABLE IF EXISTS Participacion", "DROP TABLE IF EXISTS Evento", "DROP TABLE IF EXISTS Olimpiada",
+                 "DROP TABLE IF EXISTS Deporte", "DROP TABLE IF EXISTS Deportista", "DROP TABLE IF EXISTS Equipo"]
+        try:
+            mycursor.execute(query)
+            conectordb.commit()
+        except:
+            print("Fallo al borrar las tablas")
 
-                equipo = [row[6], row[7]]
-                if equipo is not dicEquipo.values():
-                    dicEquipo[idEquipo] = equipo
-                    idEquipo += 1
+        print(mycursor.rowcount, "record(s) deleted")
+        conectordb.close()
 
-                numOlimpiada = 1
-                for olimpiadaEvento in dicOlimpiadas.values():
-                    if(olimpiadaEvento == olimpiada):
-                        break
-                    else:
-                        numOlimpiada += 1
+    def crearTablas(self, conectordb, mycursor):
 
-                numDeporte = 1
-                for deporteEvento in dicDeportes.values():
-                    if(deporteEvento == deporte):
-                        break
-                    else:
-                        numDeporte += 1
+        with open('olimpiadas.sql', 'r') as olimpFiles:
+            readTablas = olimpFiles.read()
+            tablas = mycursor.execute(readTablas, multi=True)
+            for row in tablas:
+                if row.with_rows:
+                    row.fetchall()
 
-                evento = [row[13], numDeporte, numOlimpiada]
-                if evento is not dicEventos.values():
-                    dicEventos[idEvento] = evento
-                    idEvento += 1
+        conectordb.commit()
 
-                numDeportista = 1
-                for deportistaParticipacion in dicParticipacion.values():
-                    if(deportistaParticipacion == deportista):
-                        break
-                    else:
-                        numDeportista += 1
+    def crearBBDD(self):
+        dicOlimpiadas = {}
+        dicEventos = {}
+        dicParticipacion = {}
+        dicDeportes = {}
+        dicDeportistas = {}
+        dicEquipo = {}
 
-                numEvento = 1
-                for eventoParticipacion in dicEventos.values():
-                    if (eventoParticipacion == evento):
-                        break
-                    else:
-                        numEvento += 1
+        with open('recortada.csv') as entrada:
+            reader = csv.reader(entrada, delimiter=',')
+            idOlimpiada = 1
+            idEvento = 1
+            idParticipacion = 1
+            idDeporte = 1
+            idDeportista = 1
+            idEquipo = 1
+            firstRow = 0
 
-                numEquipo = 1
-                for equipoParticipacion in dicEquipo():
-                    if(equipoParticipacion == equipo):
-                        break
-                    else:
-                        numEquipo += 1
+            for row in reader:
+                if firstRow == 0:
+                    firstRow += 1
+                else:
+                    olimpiada = [row[8], row[9], row[10], row[11]]
+                    if olimpiada is not dicOlimpiadas.values():
+                        dicOlimpiadas[idOlimpiada] = olimpiada
+                        idOlimpiada += 1
 
-                participacion = [numDeportista, numEvento, numEquipo, row[3], row[14]]
-                if participacion is not dicParticipacion.values():
-                    dicParticipacion[idParticipacion] = participacion
-                    idParticipacion += 1
+                    deporte = [row[12]]
+                    if deporte is not dicDeportes.values():
+                        dicDeportes[idDeporte] = deporte
+                        idDeporte += 1
 
-    print(dicDeportes)
+                    deportista = [row[1], row[2], row[4], row[5]]
+                    if deportista is not dicDeportistas.values():
+                        dicDeportistas[idDeportista] = deportista
+                        idDeportista += 1
+
+                    equipo = [row[6], row[7]]
+                    if equipo is not dicEquipo.values():
+                        dicEquipo[idEquipo] = equipo
+                        idEquipo += 1
+
+                    numOlimpiada = 1
+                    for olimpiadaEvento in dicOlimpiadas.values():
+                        if olimpiadaEvento == olimpiada:
+                            break
+                        else:
+                            numOlimpiada += 1
+
+                    numDeporte = 1
+                    for deporteEvento in dicDeportes.values():
+                        if deporteEvento == deporte:
+                            break
+                        else:
+                            numDeporte += 1
+
+                    evento = [row[13], numDeporte, numOlimpiada]
+                    if evento is not dicEventos.values():
+                        dicEventos[idEvento] = evento
+                        idEvento += 1
+
+                    numDeportista = 1
+                    for deportistaParticipacion in dicParticipacion.values():
+                        if deportistaParticipacion == deportista:
+                            break
+                        else:
+                            numDeportista += 1
+
+                    numEvento = 1
+                    for eventoParticipacion in dicEventos.values():
+                        if eventoParticipacion == evento:
+                            break
+                        else:
+                            numEvento += 1
+
+                    numEquipo = 1
+                    for equipoParticipacion in dicEquipo():
+                        if equipoParticipacion == equipo:
+                            break
+                        else:
+                            numEquipo += 1
+
+                    participacion = [numDeportista, numEvento, numEquipo, row[3], row[14]]
+                    if participacion is not dicParticipacion.values():
+                        dicParticipacion[idParticipacion] = participacion
+                        idParticipacion += 1
+
+        print(dicDeportes)
+
 
 crearBBDD()
