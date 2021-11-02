@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95b75cfe-df20-4a1a-bb79-155015169a1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tanda_3/Preba.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exam/Exam_Airam.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exam/battles.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tanda_2/deportistas.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanda_3/BBDD.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_3/BBDD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tanda_2/Ejer_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_2/Ejer_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1yldI2WFYvW3HjVS8pBG9AhLZAd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -33,11 +38,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tanda_3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Exam" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Code With Me" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Exam" />
       <recent name="$PROJECT_DIR$/Tanda_3" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Tanda_2" />
@@ -46,7 +52,7 @@
       <recent name="$PROJECT_DIR$/Tanda_3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.BBDD">
+  <component name="RunManager" selected="Python.Exam_Airam">
     <configuration name="BBDD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,6 +116,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Exam_Airam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Exam" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Exam/Exam_Airam.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Preba" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -131,34 +158,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ss" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tanda_2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tanda_2/ss.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Exam_Airam" />
+        <item itemvalue="Python.Ejer_3" />
         <item itemvalue="Python.BBDD" />
         <item itemvalue="Python.Preba" />
         <item itemvalue="Python.Ejer_4" />
-        <item itemvalue="Python.Ejer_3" />
-        <item itemvalue="Python.ss" />
       </list>
     </recent_temporary>
   </component>
