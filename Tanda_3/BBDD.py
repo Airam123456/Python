@@ -5,13 +5,22 @@ import time
 
 
 def borrarBBDD(conectordb, cursor):
-    # queryParticipacion = "DROP TABLE IF EXISTS Participacion"
-    # queryEvento = "DROP TABLE IF EXISTS Evento"
-    # queryOlimpiada = "DROP TABLE IF EXISTS Olimpiada"
-    # queryDeporte = "DROP TABLE IF EXISTS Deporte"
-    # queryDeportista = "DROP TABLE IF EXISTS Deportista"
-    # queryEquipo = "DROP TABLE IF EXISTS Equipo"
+    queryParticipacion = "DROP TABLE IF EXISTS Participacion"
+    queryEvento = "DROP TABLE IF EXISTS Evento"
+    queryOlimpiada = "DROP TABLE IF EXISTS Olimpiada"
+    queryDeporte = "DROP TABLE IF EXISTS Deporte"
+    queryDeportista = "DROP TABLE IF EXISTS Deportista"
+    queryEquipo = "DROP TABLE IF EXISTS Equipo"
 
+    cursor.execute(queryParticipacion)
+    cursor.execute(queryEvento)
+    cursor.execute(queryOlimpiada)
+    cursor.execute(queryDeporte)
+    cursor.execute(queryDeportista)
+    cursor.execute(queryEquipo)
+    conectordb.commit()
+
+def borrarDatos(conectordb, cursor):
     queryParticipacion = "delete from Participacion"
     queryEvento = "delete from Evento"
     queryOlimpiada = "delete from Olimpiada"
@@ -19,32 +28,47 @@ def borrarBBDD(conectordb, cursor):
     queryDeportista = "delete from Deportista"
     queryEquipo = "delete from Equipo"
 
-    try:
-        cursor.execute(queryParticipacion)
-        cursor.execute(queryEvento)
-        cursor.execute(queryOlimpiada)
-        cursor.execute(queryDeporte)
-        cursor.execute(queryDeportista)
-        cursor.execute(queryEquipo)
-        conectordb.commit()
-    except:
-        print("Fallo al borrar las tablas")
-    finally:
-        print(cursor.rowcount, "record(s) deleted")
-        conectordb.close()
-
-
-def crearTablas(conectordb, cursor):
-    with open('olimpiadas.sql', 'r') as olimpFiles:
-        readTablas = olimpFiles.read()
-        tablas = cursor.execute(readTablas, multi=True)
-        for row in tablas:
-            if row.with_rows:
-                row.fetchall()
-
+    cursor.execute(queryParticipacion)
+    cursor.execute(queryEvento)
+    cursor.execute(queryOlimpiada)
+    cursor.execute(queryDeporte)
+    cursor.execute(queryDeportista)
+    cursor.execute(queryEquipo)
     conectordb.commit()
 
-def crearBBDD():
+def crearConexion():
+    conectordb = mysql.connector.connect(
+        host="127.0.0.1",
+        user="admin",
+        password="password",
+        database="olimpiadas")
+
+    cursor = conectordb.cursor()
+
+def crearTablasSQL(conectordb, cursor):
+    with open('olimpiadas.sql', 'r') as olimpFiles:
+        readTablas = olimpFiles.read().split(';')
+        for row in readTablas:
+            cursor.execute(row)
+    conectordb.commit()
+
+def crearTablasSQLite(conectordb, cursor):
+    with open('olimpiadas.db.sql', 'r') as olimpFiles:
+        readTablas = olimpFiles.read().split(';')
+        for row in readTablas:
+            cursor.execute(row)
+    conectordb.commit()
+
+
+dicOlimpiadas = {}
+dicEventos = {}
+dicParticipacion = {}
+dicDeportes = {}
+dicDeportistas = {}
+dicEquipo = {}
+
+
+def cargarDatosCSV():
 
     archivo = input("Introducir la direccion del archivo \n")
 
@@ -53,12 +77,7 @@ def crearBBDD():
     else:
         print("Accediendo al archivo csv...")
 
-        dicOlimpiadas = {}
-        dicEventos = {}
-        dicParticipacion = {}
-        dicDeportes = {}
-        dicDeportistas = {}
-        dicEquipo = {}
+
 
         with open(archivo) as entrada:
             reader = csv.reader(entrada, delimiter=',')
@@ -121,66 +140,73 @@ def crearBBDD():
                     if row[3] == "NA":
                         dicParticipacion[claveParticipacion][3] = None
 
-        print("diccionarios cargados")
+        print("Diccionarios cargados")
 
+def crearBBDD():
+    cargarDatosCSV()
     try:
         conectordb = mysql.connector.connect(
             host="127.0.0.1",
             user="admin",
             password="password",
-            database="olimpiadas",
-            autocommit=True
-        )
+            database="olimpiadas")
+
         cursor = conectordb.cursor()
         print("Coneccion exitosa")
+        try:
+            borrarBBDD()
+            print("Base de datos vaciada correctamente.")
+            conectordb.commit()
+
+            try:
+                crearTablasSQL(conectordb, cursor)
+                print("Estructura de la base de datos creada correctamente.")
+                conectordb.commit()
+            except:
+                print("No se ha podido crear la estructura de la base de datos.")
+            try:
+                queryInsertOlimpiada = "INSERT INTO olimpiadas.Olimpiada (id_olimpiada, nombre, anio, temporada, ciudad) VALUES (%s, %s, %s, %s, %s)"
+                list_olimpiadas = list(dicOlimpiadas.values())
+                cursor.executemany(queryInsertOlimpiada, list_olimpiadas)
+                print("olimpiadas cargadas")
+                conectordb.commit()
+
+                queryInsertEquipo = "Insert into Equipo (id_equipo, nombre, iniciales) values (%s, %s, %s)"
+                list_equipos = list(dicEquipo.values())
+                cursor.executemany(queryInsertEquipo, list_equipos)
+                print("equipos cargados")
+                conectordb.commit()
+
+
+                queryInsertDeportista = "Insert into Deportista (id_deportista, nombre, sexo, peso, altura) values (%s, %s, %s, %s, %s)"
+                cursor.executemany(queryInsertDeportista, list(dicDeportistas.values()))
+                print("deportistas cargados")
+                conectordb.commit()
+
+
+                queryInsertDeporte = "Insert into Deporte (id_deporte, nombre) values (%s,%s)"
+                cursor.executemany(queryInsertDeporte, list(dicDeportes.values()))
+                print("deportes cargados")
+                conectordb.commit()
+
+
+                queryInsertEvento = "insert into Evento (id_evento, nombre, id_olimpiada, id_deporte) values (%s,%s,%s,%s)"
+                cursor.executemany(queryInsertEvento, list(dicEventos.values()))
+                print("eventos cargados")
+
+                queryInsertParticipacion = "insert into Participacion (id_deportista, id_evento, id_equipo, edad, medalla) values (%s,%s,%s,%s,%s)"
+                cursor.executemany(queryInsertParticipacion, list(dicParticipacion.values()))
+                print("Participaciones cargadas")
+                conectordb.commit()
+                conectordb.close()
+
+            except:
+                print("Fallo en los inserts")
+                borrarDatos(conectordb, cursor)
+        except:
+            print("No se ha podido borrar la base de datos.")
     except:
         print("Fallo en la coneccion")
-
-    try:
-        borrarBBDD(conectordb, cursor)
-        print("Base de datos vaciada correctamente.")
-        # try:
-        #     crearTablas(conectordb, cursor)
-        #     print("Estructura de la base de datos creada correctamente.")
-        # except:
-        #     print("No se ha podido crear la estructura de la base de datos.")
-    except:
-        print("No se ha podido borrar la base de datos.")
-
-
-
-    try:
-        queryInsertOlimpiada = "Insert into Olimpiada (id_olimpiada,nombre,anio,temporada,ciudad) values (%s, %s, %s, %s, %s)"
-        list_olimpiadas = dicOlimpiadas.values()
-        cursor.executemany(queryInsertOlimpiada, list_olimpiadas)
-
-        print("olimpiadas cargadas")
-
-        queryInsertEquipo = "Insert into Equipo (id_equipo, nombre, iniciales) values (%s, %s, %s)"
-        list_equipos = dicEquipo.values()
-        cursor.executemany(queryInsertEquipo, list_equipos)
-
-        print("equipos cargados")
-
-        queryInsertDeportista = "Insert into Deportista (id_deportista, nombre, sexo, peso, altura) values (%s, %s, %s, %s, %s)"
-        cursor.executemany(queryInsertDeportista, list(dicDeportistas.values()))
-
-        print("deportistas cargados")
-
-        queryInsertDeporte = "Insert into Deporte (id_deporte, nombre) values (%s,%s)"
-        cursor.executemany(queryInsertDeporte, list(dicDeportes.values()))
-
-        print("deportes cargados")
-
-        queryInsertEvento = "insert into Evento (id_evento, nombre, id_olimpiada, id_deporte) values (%s,%s,%s,%s)"
-        cursor.executemany(queryInsertEvento, list(dicEventos.values()))
-        print("eventos cargados")
-
-        queryInsertParticipacion = "insert into Participacion (id_deportista, id_evento, id_equipo, edad, medalla) values (%s,%s,%s,%s,%s)"
-        cursor.executemany(queryInsertParticipacion, list(dicParticipacion.values()))
-        print("Participaciones cargadas")
-    except:
-        print("Fallo en los inserts")
 
 tic = time.perf_counter()
 print("La carga de la información se ha realizado correctamente")
@@ -188,4 +214,24 @@ crearBBDD()
 toc = time.perf_counter()
 print(f"Build finished in {(toc - tic) / 60:0.0f} minutes {(toc - tic) % 60:0.0f} seconds")
 
+def listarDeportistasParticipantes():
+    conectordb = mysql.connector.connect(
+        host="127.0.0.1",
+        user="admin",
+        password="password",
+        database="olimpiadas")
+
+    cursor = conectordb.cursor()
+
+    temporada = input("Introduce temporada Winter o Summer (W/S)\n")
+    while (temporada.upper() != "W" and temporada.upper() != "S"):
+        temporada = input(
+            "Valor introducido no permitido. Vuelve a intentarlo:\nIntroduce temporada Winter o Summer (W/S)\n")
+    if (temporada.upper() == "W"):
+        temporada = "Winter"
+    else:
+        temporada = "Summer"
+
+    query = "select nombre, id_olimpiada from Olimpiada where %s = temporada order by nombre"
+    cursor.execute(query(temporada))
 

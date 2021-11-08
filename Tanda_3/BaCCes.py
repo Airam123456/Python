@@ -81,10 +81,10 @@ class Manejo_de_Conectores:
         # Conectamos a la base de datos escogida
         if check == 1:
             self.con = mysql.connector.connect(
-                user='usuOlimpiadas',
-                password='dm2',
-                host='127.0.0.1',
-                database='olimpiadas'
+                host="127.0.0.1",
+                user="admin",
+                password="password",
+                database="olimpiadas"
             )
             self.cursor = self.con.cursor(buffered=True)
             self.comodin = "%s"

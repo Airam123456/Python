@@ -39,10 +39,6 @@ CREATE TABLE `Deporte` (
 -- Volcado de datos para la tabla `Deporte`
 --
 
-INSERT INTO `Deporte` (`id_deporte`, `nombre`) VALUES
-(1, 'Basketball'),
-(2, 'Judo'),
-(3, 'Football');
 
 -- --------------------------------------------------------
 
@@ -62,9 +58,7 @@ CREATE TABLE `Deportista` (
 -- Volcado de datos para la tabla `Deportista`
 --
 
-INSERT INTO `Deportista` (`id_deportista`, `nombre`, `sexo`, `peso`, `altura`) VALUES
-(1, 'A Dijiang', 'M', 80, 180),
-(2, 'A Lamusi', 'M', 60, 170);
+
 
 -- --------------------------------------------------------
 
@@ -82,9 +76,6 @@ CREATE TABLE `Equipo` (
 -- Volcado de datos para la tabla `Equipo`
 --
 
-INSERT INTO `Equipo` (`id_equipo`, `nombre`, `iniciales`) VALUES
-(1, 'China', 'CHN'),
-(2, 'Denmark', 'DEN');
 
 -- --------------------------------------------------------
 
@@ -117,10 +108,6 @@ CREATE TABLE `Olimpiada` (
 -- Volcado de datos para la tabla `Olimpiada`
 --
 
-INSERT INTO `Olimpiada` (`id_olimpiada`, `nombre`, `anio`, `temporada`, `ciudad`) VALUES
-(1, '1992 Summer', 1992, 'Summer', 'Barcelona'),
-(2, '2012 Summer', 2012, 'Summer', 'London'),
-(3, '1920 Summer', 1920, 'Summer', 'Antwerpen');
 
 -- --------------------------------------------------------
 
