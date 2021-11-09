@@ -210,9 +210,10 @@ def crearBBDD():
 
 tic = time.perf_counter()
 print("La carga de la información se ha realizado correctamente")
-crearBBDD()
+#crearBBDD()
 toc = time.perf_counter()
 print(f"Build finished in {(toc - tic) / 60:0.0f} minutes {(toc - tic) % 60:0.0f} seconds")
+
 
 def listarDeportistasParticipantes():
     conectordb = mysql.connector.connect(
@@ -225,13 +226,55 @@ def listarDeportistasParticipantes():
 
     temporada = input("Introduce temporada Winter o Summer (W/S)\n")
     while (temporada.upper() != "W" and temporada.upper() != "S"):
-        temporada = input(
-            "Valor introducido no permitido. Vuelve a intentarlo:\nIntroduce temporada Winter o Summer (W/S)\n")
+        temporada = input("Valor introducido no permitido.\nIntroduce temporada Winter o Summer (W/S)\n")
     if (temporada.upper() == "W"):
         temporada = "Winter"
     else:
         temporada = "Summer"
 
-    query = "select nombre, id_olimpiada from Olimpiada where %s = temporada order by nombre"
-    cursor.execute(query(temporada))
+
+    query = "select nombre, id_olimpiada from Olimpiada where Olimpiada.temporada = '" + temporada  +"' order by nombre;"
+    cursor.execute(query)
+
+    ediciones = {}
+    contEdicion = 0
+    for row in cursor:
+        print("\nEscribe " + str(contEdicion) + " para seleccionar:\n\t-Edición Olímpica:" + str(row[0]))
+        ediciones[contEdicion] = (row[0], row[1])
+        contEdicion += 1
+
+    numEdicion = int(input("\nNúmero de la edición deseada:"))
+    while (numEdicion < 0 or numEdicion > contEdicion - 1):
+        numEdicion = int(input("\nNúmero de la edición erroneo, introduzca uno correcto:"))
+
+    edicionSeleccionada = ediciones[numEdicion]
+    print("##################################################")
+
+    query = "select Deporte.nombre, Deporte.id_deporte from Evento, Deporte where Evento.id_deporte = Deporte.id_deporte and '" + str(edicionSeleccionada[1]) + "' = id_olimpiada group by Deporte.id_deporte;"
+    cursor.execute(query)
+
+    deportes = {}
+    contDeporte = 0
+    for row in cursor:
+        print("\nEscribe " + str(contDeporte) + " para seleccionar:\n\t-Deporte:" + str(row[0]))
+        deportes[contDeporte] = (row[0], row[1])
+        contDeporte += 1
+
+    numDeporte = int(input("\nNumero del deporte deseado:"))
+    while(numDeporte < 0 or numDeporte > contDeporte -1):
+        numDeporte = int(input("\nNúmero del deporte erroneo, introduzca uno correcto:"))
+
+    deporteSelecionado = deportes[numDeporte]
+    print("##################################################")
+
+    query = "select nombre, id_evento from Evento where '" + str(deporteSelecionado[1]) + "' = id_deporte and '" + str(edicionSeleccionada[1]) + "' = id_olimpiada;"
+    cursor.execute(query)
+
+    id_evento = ""
+    for row in cursor:
+        id_evento = row[1]
+    print("-- Resumen --")
+    print("Temporada: " + temporada + "\nEdición Olímpica: " + edicionSeleccionada[0] + "\nDeporte: " + deporteSelecionado[0] + "\nEvento: " + str(row[0]))
+
+listarDeportistasParticipantes()
 

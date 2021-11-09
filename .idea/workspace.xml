@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95b75cfe-df20-4a1a-bb79-155015169a1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tanda_3/olimpiadas.db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tanda_3/BBDD.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_3/BBDD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanda_3/BaCCes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_3/BaCCes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanda_3/olimpiadas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_3/olimpiadas.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +49,7 @@
       <recent name="$PROJECT_DIR$/Tanda_3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.BaCCes">
+  <component name="RunManager" selected="Python.BBDD">
     <configuration name="BBDD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,8 +157,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.BaCCes" />
         <item itemvalue="Python.BBDD" />
+        <item itemvalue="Python.BaCCes" />
         <item itemvalue="Python.Exam_Airam" />
         <item itemvalue="Python.Ejer_3" />
         <item itemvalue="Python.Preba" />
