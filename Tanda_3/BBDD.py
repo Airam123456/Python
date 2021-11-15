@@ -276,5 +276,49 @@ def listarDeportistasParticipantes():
     print("-- Resumen --")
     print("Temporada: " + temporada + "\nEdición Olímpica: " + edicionSeleccionada[0] + "\nDeporte: " + deporteSelecionado[0] + "\nEvento: " + str(row[0]))
 
+    print("Deportistas participantes: \n")
+    query = "select Deportista.nombre, altura, peso, edad, Equipo.nombre, medalla from Participacion, Deportista, Equipo where '" + str(id_evento) + "' = id_evento "
+    query += "and Participacion.id_deportista = Deportista.id_deportista and Participacion.id_equipo = Equipo.id_equipo order by Deportista.nombre;"
+
+    cursor.execute(query)
+
+    contResultDep = 1
+    for row in cursor:
+        print(str(contResultDep) + ". " + str(row[0]) + "\n\t-Altura:" + str(row[1]) + "\n\t-Peso:" + str(
+            row[2]) + "\n\t-Edad:" + str(row[3]) + "\n\t-Equipo:" + str(row[4]) + "\n\t-Medalla:" + str(row[5]) + "\n")
+        contResultDep += 1
+
+def modificarMedalla():
+    conectordb = mysql.connector.connect(
+        host="127.0.0.1",
+        user="admin",
+        password="password",
+        database="olimpiadas")
+
+    cursor = conectordb.cursor()
+
+    deportista = input("Introduce nombre del deportista a buscar:\n")
+    query = "select nombre, id_deportista from Deportista"
+    cursor.execute(query)
+
+    deportistas = {}
+    contDeportista = 0
+    for row in cursor:
+        if(row[0].upper().__contains__(deportista.upper())):
+            deportistas[contDeportista] = (row[0], row[1])
+            print("\nEscribe " + str(contDeportista) + " para seleccionar:\n\t-Deportista: " + str(row[0]))
+            contDeportista += 1
+
+    numDeportista = int(input("\nNúmero del deportista deseada:"))
+    while (numDeportista < 0 or numDeportista > contDeportista - 1):
+        numDeportista = int(input("\nNúmero del deportista erroneo, introduzca uno correcto:"))
+
+    deportista = deportistas[numDeportista]
+
+    query = "select Evento.nombre, Evento.id_evento from Evento, Paticipacion where Evento.id_evento = Participacion.id_evento and '" + str(deportista[1] + "' = id_deportista;")
+    cursor.execute(query)
+
+
 listarDeportistasParticipantes()
+modificarMedalla()
 
