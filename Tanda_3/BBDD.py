@@ -77,8 +77,6 @@ def cargarDatosCSV():
     else:
         print("Accediendo al archivo csv...")
 
-
-
         with open(archivo) as entrada:
             reader = csv.reader(entrada, delimiter=',')
             entrada.readline()
@@ -88,7 +86,6 @@ def cargarDatosCSV():
             idEquipo = 1
 
             for row in reader:
-
                 if row[8] not in dicOlimpiadas:
                     idOlimAct = idOlimpiada
                     olimpiada = [idOlimAct, row[8], row[9], row[10], row[11]]
@@ -154,7 +151,7 @@ def crearBBDD():
         cursor = conectordb.cursor()
         print("Coneccion exitosa")
         try:
-            borrarBBDD()
+            borrarBBDD(conectordb, cursor)
             print("Base de datos vaciada correctamente.")
             conectordb.commit()
 
@@ -288,6 +285,9 @@ def listarDeportistasParticipantes():
             row[2]) + "\n\t-Edad:" + str(row[3]) + "\n\t-Equipo:" + str(row[4]) + "\n\t-Medalla:" + str(row[5]) + "\n")
         contResultDep += 1
 
+    cursor.close()
+    conectordb.close()
+
 def modificarMedalla():
     conectordb = mysql.connector.connect(
         host="127.0.0.1",
@@ -304,21 +304,56 @@ def modificarMedalla():
     deportistas = {}
     contDeportista = 0
     for row in cursor:
+        #El uso del contains lo vi buscando por internet, y lo uso para buscar buscar el nombre seleccionado
         if(row[0].upper().__contains__(deportista.upper())):
             deportistas[contDeportista] = (row[0], row[1])
-            print("\nEscribe " + str(contDeportista) + " para seleccionar:\n\t-Deportista: " + str(row[0]))
+            print("\nEscribe " + str(contDeportista) + " para seleccionar: \n\t-Deportista: " + str(row[0]))
             contDeportista += 1
 
-    numDeportista = int(input("\nNúmero del deportista deseada:"))
+    numDeportista = int(input("\nNúmero del deportista deseado/a:"))
     while (numDeportista < 0 or numDeportista > contDeportista - 1):
         numDeportista = int(input("\nNúmero del deportista erroneo, introduzca uno correcto:"))
 
-    deportista = deportistas[numDeportista]
+    deportistaSelecionado = deportistas[numDeportista]
+    print("##################################################")
 
-    query = "select Evento.nombre, Evento.id_evento from Evento, Paticipacion where Evento.id_evento = Participacion.id_evento and '" + str(deportista[1] + "' = id_deportista;")
+
+    query = "select Evento.nombre, Evento.id_evento from Evento, Participacion where Evento.id_evento = Participacion.id_evento and '" + str(deportistaSelecionado[1]) + "' = id_deportista;"
     cursor.execute(query)
 
+    eventos = {}
+    contEvento = 0
+    for row in cursor:
+        eventos[contEvento] = (row[0], row[1])
+        print("\nEscribe " + str(contEvento) + " para seleccionar:\n\t-Evento: " + str(row[0]))
+        contEvento += 1
 
-listarDeportistasParticipantes()
-modificarMedalla()
+    numEvento = int(input("\nNúmero del evento deseado:"))
+    while (numEvento < 0 or numEvento > contEvento - 1):
+        numEvento = int(input("\nNúmero del deportista erroneo, introduzca uno correcto:"))
 
+    eventoSelecionado = eventos[numEvento]
+    print("##################################################")
+
+
+    medalla = input("\nEscribe que tipo de medalla quieres asignarle Bronze, Silver, Gold o NA: \n")
+
+    query = "update Participacion set medalla = '" + str(medalla) + "' where '" + str(deportistaSelecionado[1]) + "' = id_deportista and '" + str(eventoSelecionado[1]) + "' = id_evento;"
+    cursor.execute(query)
+
+    query = "select medalla from Participacion where '" + str(deportistaSelecionado[1]) + "' = id_deportista and '" + str(eventoSelecionado[1]) + "' = id_evento;"
+    cursor.execute(query)
+
+    medallas = {}
+    contMedallas = 0
+    for row in cursor:
+        medallas[contMedallas] = (row[0])
+        print("\nMedalla asignada : " + str(row[0]))
+
+    conectordb.commit()
+    cursor.close()
+    conectordb.close()
+
+crearBBDD()
+#listarDeportistasParticipantes()
+#modificarMedalla()

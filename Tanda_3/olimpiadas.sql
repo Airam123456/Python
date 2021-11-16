@@ -47,7 +47,7 @@ CREATE TABLE `Deporte` (
 --
 
 CREATE TABLE `Deportista` (
-  `id_deportista` int(11) NOT NULL,
+  `id_deportista` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(150) COLLATE latin1_spanish_ci NOT NULL,
   `sexo` enum('M','F') COLLATE latin1_spanish_ci NOT NULL,
   `peso` int(11) DEFAULT NULL,

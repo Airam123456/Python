@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `Equipo` (
 );
 DROP TABLE IF EXISTS `Deportista`;
 CREATE TABLE IF NOT EXISTS `Deportista` (
-	`id_deportista`	int ( 11 ) NOT NULL,
+	`id_deportista`	int ( 11 ) NOT NULL AUTOINCREMENT,
 	`nombre`	varchar ( 150 ) NOT NULL,
 	`sexo`	varchar ( 1 ) NOT NULL,
 	`peso`	int ( 11 ) DEFAULT NULL,

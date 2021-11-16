@@ -4,6 +4,8 @@
     <list default="true" id="95b75cfe-df20-4a1a-bb79-155015169a1b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tanda_3/BBDD.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_3/BBDD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tanda_3/olimpiadas.db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_3/olimpiadas.db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tanda_3/olimpiadas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_3/olimpiadas.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +21,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1yldI2WFYvW3HjVS8pBG9AhLZAd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
