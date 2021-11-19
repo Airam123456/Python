@@ -36,6 +36,7 @@ def borrarDatos(conectordb, cursor):
     cursor.execute(queryEquipo)
     conectordb.commit()
 
+'''
 def crearConexion():
     conectordb = mysql.connector.connect(
         host="127.0.0.1",
@@ -44,6 +45,7 @@ def crearConexion():
         database="olimpiadas")
 
     cursor = conectordb.cursor()
+'''
 
 def crearTablasSQL(conectordb, cursor):
     with open('olimpiadas.sql', 'r') as olimpFiles:
@@ -151,7 +153,7 @@ def crearBBDD():
         cursor = conectordb.cursor()
         print("Coneccion exitosa")
         try:
-            borrarBBDD(conectordb, cursor)
+            borrarDatos(conectordb, cursor)
             print("Base de datos vaciada correctamente.")
             conectordb.commit()
 
@@ -354,6 +356,52 @@ def modificarMedalla():
     cursor.close()
     conectordb.close()
 
-crearBBDD()
+def aniadirDeporParti():
+
+    conectordb = mysql.connector.connect(
+        host="127.0.0.1",
+        user="admin",
+        password="password",
+        database="olimpiadas")
+
+    cursor = conectordb.cursor()
+
+    deportista = input("Introduce nombre del deportista a buscar:\n")
+    query = "select nombre, id_deportista from Deportista"
+    cursor.execute(query)
+
+    deportistas = {}
+    contDeportista = 0
+    for row in cursor:
+        #El uso del contains lo vi buscando por internet, y lo uso para buscar buscar el nombre seleccionado
+        if(row[0].upper().__contains__(deportista.upper())):
+            deportistas[contDeportista] = (row[0], row[1])
+            print("\nEscribe " + str(contDeportista) + " para seleccionar: \n\t-Deportista: " + str(row[0]))
+            contDeportista += 1
+
+    if contDeportista == 0:
+        print("Deportista no encontrado. \n Añadiendolo a la base de datos.")
+
+        sexo = input("Introduce sexo del nuevo deportista: ")
+        while (sexo.upper() != "M" and sexo.upper() != "F"):
+            sexo = input("Sexo no permitido.\nValores aceptados: M, F \n")
+
+        peso = int(input("Introduce peso del nuevo deportista: "))
+        while (peso < 0 or peso > 500):
+            peso = int(input("\nEl peso no puede ser menor de 0 ni mayor de 500.\nIntroduce peso del nuevo deportista: "))
+
+
+
+    temporada = input("Introduce temporada Winter o Summer (W/S)\n")
+    while (temporada.upper() != "W" and temporada.upper() != "S"):
+        temporada = input("Valor introducido no permitido.\nIntroduce temporada Winter o Summer (W/S)\n")
+    if (temporada.upper() == "W"):
+        temporada = "Winter"
+    else:
+        temporada = "Summer"
+
+
+aniadirDeporParti()
+#crearBBDD()
 #listarDeportistasParticipantes()
 #modificarMedalla()
