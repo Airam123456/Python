@@ -1,24 +1,78 @@
 import mysql.connector
-import sqlalchemy
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-import csv
-import os
-import time
+from sqlalchemy.orm import relationship, sessionmaker
 
-engine = create_engine('mysql+pymysql://admin:password@localhost/olimpiadas', echo = True)
 Base = declarative_base()
 
 class Olimpiada(Base):
-    __tablename__ ='olimpiadas'
+    __tablename__ = 'Olimpiada'
+    id_olimpiada = Column(Integer, primary_key=True)
+    nombre = Column(String)
+    anio = Column(String)
+    temporada = Column(String)
+    ciudad = Column(String)
+
+
+class Deporte(Base):
+    __tablename__ = 'Deporte'
+    id_deporte = Column(Integer, primary_key=True)
+    nombre = Column(String)
+
+
+class Deportista(Base):
+    __tablename__ = 'Deportista'
+    id_deportista = Column(Integer, primary_key=True)
+    nombre = Column(String)
+    sexo = Column(String)
+    peso = Column(Integer)
+    altura = Column(Integer)
+
+
+class Equipo(Base):
+    __tablename__ = 'Equipo'
+    id_equipo = Column(Integer, primary_key=True)
+    nombre = Column(String)
+    iniciales = Column(String)
+
+
+class Evento(Base):
+    __tablename__ = 'Evento'
+    id_evento = Column(Integer, primary_key=True)
+    nombre = Column(String)
+    id_olimpiada = Column(Integer, ForeignKey('Olimpiada.id_olimpiada'))
+    id_deporte = Column(Integer, ForeignKey('Deporte.id_deporte'))
+    olimpiada = relationship("Olimpiada", back_populates="eventos")
+    deporte = relationship("Deporte", back_populates="eventos")
+
+
+class Participacion(Base):
+    __tablename__ = 'Participacion'
+    id_deportista = Column(Integer, ForeignKey('Deportista.id_deportista'), primary_key=True)
+    id_evento = Column(Integer, ForeignKey('Evento.id_evento'), primary_key=True)
+    id_equipo = Column(Integer, ForeignKey('Equipo.id_equipo'))
+    edad = Column(Integer)
+    medalla = Column(String)
+    deportista = relationship("Deportista", back_populates="participaciones")
+    evento = relationship("Evento", back_populates="participaciones")
+    equipo = relationship("Equipo", back_populates="participaciones")
+
+
+Olimpiada.eventos = relationship("Evento", back_populates="olimpiada")
+Deporte.eventos = relationship("Evento", back_populates="deporte")
+
+Deportista.participaciones = relationship("Participacion", back_populates="deportista")
+Evento.participaciones = relationship("Participacion", back_populates="evento")
+Equipo.participaciones = relationship("Participacion", back_populates="equipo")
+
+
 
 
 
 def menu():
-
     respuesta = int(input("¿Qué deseas hacer?\n1. Listar deportistas participantes\n2. Modificar medalla"
                           "\n3. Añadir deportista/participación\n4. Eliminar participación\n0. Salir del programa\n"))
-    while ( respuesta < 0 or respuesta > 4 ):
+    while (respuesta < 0 or respuesta > 4):
         int(input("Respuesta no valida, intentelo de nuevo"))
     if respuesta == 1:
         listarDeportistasParticipantes()
@@ -33,16 +87,20 @@ def menu():
 
 
 
+engine = create_engine('mysql+pymysql://admin:password@localhost/olimpiadas', echo=True)
+# Base.metadata.create_all(engine)
+#Session = sessionmaker(bind=engine)
+#session = Session()
+#result = session.get(Equipo, 2)
+#result = session.query(Evento).filter(Evento.id_evento == 25).one()
+#print(result.nombre)
+
+
+
 def listarDeportistasParticipantes():
 
-    #nos conectamos a la BBDD
-    conectordb = mysql.connector.connect(
-        host="127.0.0.1",
-        user="admin",
-        password="password",
-        database="olimpiadas")
-
-    cursor = conectordb.cursor()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
     temporada = input("Introduce temporada Winter o Summer (W/S)\n")
     while (temporada.upper() != "W" and temporada.upper() != "S"):
@@ -52,15 +110,13 @@ def listarDeportistasParticipantes():
     else:
         temporada = "Summer"
 
-
-    query = "select nombre, id_olimpiada from Olimpiada where Olimpiada.temporada = '" + temporada  +"' order by nombre;"
-    cursor.execute(query)
+    cursor = session.query(Olimpiada).filter(Olimpiada.temporada == temporada)
 
     ediciones = {}
     contEdicion = 0
     for row in cursor:
-        print("\nEscribe " + str(contEdicion) + " para seleccionar:\n\t-Edición Olímpica:" + str(row[0]))
-        ediciones[contEdicion] = (row[0], row[1])
+        print("\nEscribe " + str(contEdicion) + " para seleccionar:\n\t-Edición Olímpica:" + str(row.nombre))
+        ediciones[contEdicion] = (row.nombre, row.id_olimpiada)
         contEdicion += 1
 
     numEdicion = int(input("\nNúmero de la edición deseada:"))
@@ -70,8 +126,12 @@ def listarDeportistasParticipantes():
     edicionSeleccionada = ediciones[numEdicion]
     print("##################################################")
 
-    query = "select Deporte.nombre, Deporte.id_deporte from Evento, Deporte where Evento.id_deporte = Deporte.id_deporte and '" + str(edicionSeleccionada[1]) + "' = id_olimpiada group by Deporte.id_deporte;"
+
+    query = "select Deporte.nombre, Deporte.id_deporte from Evento, Deporte where Evento.id_deporte = Deporte.id_deporte and '" + str(
+        edicionSeleccionada[1]) + "' = id_olimpiada group by Deporte.id_deporte;"
     cursor.execute(query)
+
+    cursor = session.query
 
     deportes = {}
     contDeporte = 0
@@ -81,23 +141,26 @@ def listarDeportistasParticipantes():
         contDeporte += 1
 
     numDeporte = int(input("\nNumero del deporte deseado:"))
-    while(numDeporte < 0 or numDeporte > contDeporte -1):
+    while (numDeporte < 0 or numDeporte > contDeporte - 1):
         numDeporte = int(input("\nNúmero del deporte erroneo, introduzca uno correcto:"))
 
     deporteSelecionado = deportes[numDeporte]
     print("##################################################")
-
-    query = "select nombre, id_evento from Evento where '" + str(deporteSelecionado[1]) + "' = id_deporte and '" + str(edicionSeleccionada[1]) + "' = id_olimpiada;"
+'''
+    query = "select nombre, id_evento from Evento where '" + str(deporteSelecionado[1]) + "' = id_deporte and '" + str(
+        edicionSeleccionada[1]) + "' = id_olimpiada;"
     cursor.execute(query)
 
     id_evento = ""
     for row in cursor:
         id_evento = row[1]
     print("-- Resumen --")
-    print("Temporada: " + temporada + "\nEdición Olímpica: " + edicionSeleccionada[0] + "\nDeporte: " + deporteSelecionado[0] + "\nEvento: " + str(row[0]))
+    print("Temporada: " + temporada + "\nEdición Olímpica: " + edicionSeleccionada[0] + "\nDeporte: " +
+          deporteSelecionado[0] + "\nEvento: " + str(row[0]))
 
     print("Deportistas participantes: \n")
-    query = "select Deportista.nombre, altura, peso, edad, Equipo.nombre, medalla from Participacion, Deportista, Equipo where '" + str(id_evento) + "' = id_evento "
+    query = "select Deportista.nombre, altura, peso, edad, Equipo.nombre, medalla from Participacion, Deportista, Equipo where '" + str(
+        id_evento) + "' = id_evento "
     query += "and Participacion.id_deportista = Deportista.id_deportista and Participacion.id_equipo = Equipo.id_equipo order by Deportista.nombre;"
 
     cursor.execute(query)
@@ -112,6 +175,7 @@ def listarDeportistasParticipantes():
     conectordb.close()
     menu()
 
+'''
 def modificarMedalla():
     conectordb = mysql.connector.connect(
         host="127.0.0.1",
@@ -128,8 +192,8 @@ def modificarMedalla():
     deportistas = {}
     contDeportista = 0
     for row in cursor:
-        #El uso del contains lo vi buscando por internet, y lo uso para buscar buscar el nombre seleccionado
-        if(row[0].upper().__contains__(deportista.upper())):
+        # El uso del contains lo vi buscando por internet, y lo uso para buscar buscar el nombre seleccionado
+        if (row[0].upper().__contains__(deportista.upper())):
             deportistas[contDeportista] = (row[0], row[1])
             print("\nEscribe " + str(contDeportista) + " para seleccionar: \n\t-Deportista: " + str(row[0]))
             contDeportista += 1
@@ -141,8 +205,8 @@ def modificarMedalla():
     deportistaSelecionado = deportistas[numDeportista]
     print("##################################################")
 
-
-    query = "select Evento.nombre, Evento.id_evento from Evento, Participacion where Evento.id_evento = Participacion.id_evento and '" + str(deportistaSelecionado[1]) + "' = id_deportista;"
+    query = "select Evento.nombre, Evento.id_evento from Evento, Participacion where Evento.id_evento = Participacion.id_evento and '" + str(
+        deportistaSelecionado[1]) + "' = id_deportista;"
     cursor.execute(query)
 
     eventos = {}
@@ -159,13 +223,14 @@ def modificarMedalla():
     eventoSelecionado = eventos[numEvento]
     print("##################################################")
 
-
     medalla = input("\nEscribe que tipo de medalla quieres asignarle Bronze, Silver, Gold o NA: \n")
 
-    query = "update Participacion set medalla = '" + str(medalla) + "' where '" + str(deportistaSelecionado[1]) + "' = id_deportista and '" + str(eventoSelecionado[1]) + "' = id_evento;"
+    query = "update Participacion set medalla = '" + str(medalla) + "' where '" + str(
+        deportistaSelecionado[1]) + "' = id_deportista and '" + str(eventoSelecionado[1]) + "' = id_evento;"
     cursor.execute(query)
 
-    query = "select medalla from Participacion where '" + str(deportistaSelecionado[1]) + "' = id_deportista and '" + str(eventoSelecionado[1]) + "' = id_evento;"
+    query = "select medalla from Participacion where '" + str(
+        deportistaSelecionado[1]) + "' = id_deportista and '" + str(eventoSelecionado[1]) + "' = id_evento;"
     cursor.execute(query)
 
     medallas = {}
@@ -179,8 +244,8 @@ def modificarMedalla():
     conectordb.close()
     menu()
 
-def aniadirDeporParti():
 
+def aniadirDeporParti():
     conectordb = mysql.connector.connect(
         host="127.0.0.1",
         user="admin",
@@ -196,18 +261,16 @@ def aniadirDeporParti():
     deportistas = {}
     contDeportista = 0
     for row in cursor:
-        #El uso del contains lo vi buscando por internet, y lo uso para buscar buscar el nombre seleccionado
-        if(row[0].upper().__contains__(deportista.upper())):
+        # El uso del contains lo vi buscando por internet, y lo uso para buscar buscar el nombre seleccionado
+        if (row[0].upper().__contains__(deportista.upper())):
             deportistas[contDeportista] = (row[0], row[1])
             print("\nEscribe " + str(contDeportista) + " para seleccionar: \n\t-Deportista: " + str(row[0]))
             contDeportista += 1
 
-
-    #ADVERTENCIA!!! A partir de este punto la maquina virtual que usaba para ejecutar la base de datos dejor de funcionar asi que no pude comprobar si lo que hacia era correcto
-
+    # ADVERTENCIA!!! A partir de este punto la maquina virtual que usaba para ejecutar la base de datos dejor de funcionar asi que no pude comprobar si lo que hacia era correcto
 
     if contDeportista == 0:
-        #Si el deportista no existe lo creamos
+        # Si el deportista no existe lo creamos
         print("Deportista no encontrado. \n Añadiendolo a la base de datos.")
 
         sexo = input("Introduce sexo del nuevo deportista: ")
@@ -216,16 +279,17 @@ def aniadirDeporParti():
 
         peso = int(input("Introduce peso del nuevo deportista: "))
         while (peso < 0 or peso > 500):
-            peso = int(input("\nEl peso no puede ser menor de 0 ni mayor de 500.\nIntroduce peso del nuevo deportista: "))
+            peso = int(
+                input("\nEl peso no puede ser menor de 0 ni mayor de 500.\nIntroduce peso del nuevo deportista: "))
 
         altura = int(input("Introduce altura del nuevo deportista: "))
         while (altura < 0 or altura > 300):
             altura = int(
                 input("\nla altura no puede ser menor de 0 ni mayor de 300.\nIntroduce altura del nuevo deportista: "))
 
-        #creo que aqui no tengo que poner el id del deportista porque eso lo hace el autoincrement
+        # creo que aqui no tengo que poner el id del deportista porque eso lo hace el autoincrement
         query = "insert into Deportista (nombre, sexo, peso, altura) values (%s,%s,%s,%s);"
-        cursor.execute(query(deportista, sexo,peso,altura))
+        cursor.execute(query(deportista, sexo, peso, altura))
         conectordb.commit()
         print("Deportista insertado\n")
 
@@ -301,16 +365,17 @@ def aniadirDeporParti():
 
     eventoSeleccionado = eventos[numEvento]
 
-    #Aqui dejamos el id del Evento que necesitaremos para la insert
+    # Aqui dejamos el id del Evento que necesitaremos para la insert
     idEvento = eventoSeleccionado[1]
 
     medalla = input("Introduce la medalla del deportista, Bronze, Silver, Gold o NA: \n: ")
 
     edad = int(input("Introduce edad del deportista en la participacion: "))
     while (edad < 0 or edad > 100):
-        peso = int(input("\nLa edad no puede ser menor de 0 ni mayor de 100.\nIntroduce edad del deportista en la participacion: "))
+        peso = int(input(
+            "\nLa edad no puede ser menor de 0 ni mayor de 100.\nIntroduce edad del deportista en la participacion: "))
 
-    #Informacion del equipo
+    # Informacion del equipo
 
     query = "select nombre, id_equipo from Equipo;"
     cursor.execute(query)
@@ -330,7 +395,7 @@ def aniadirDeporParti():
 
     idEquipo = equipoSelecionado[1]
 
-    #Insertamos participacion
+    # Insertamos participacion
 
     query = "insert into Participacion (id_deportista, id_evento, id_equipo, edad, medalla) values (%s,%s,%s,%s,%s);"
     cursor.execute(query(idDeportista, idEvento, idEquipo, edad, medalla))
@@ -341,8 +406,8 @@ def aniadirDeporParti():
     conectordb.close()
     menu()
 
-def eliminarParticipacion():
 
+def eliminarParticipacion():
     conectordb = mysql.connector.connect(
         host="127.0.0.1",
         user="admin",
@@ -394,11 +459,11 @@ def eliminarParticipacion():
 
     eventoSeleccionado = eventos[numEvento]
 
-    #Aqui dejamos el id del Evento que necesitaremos para la insert
+    # Aqui dejamos el id del Evento que necesitaremos para la insert
     idEvento = eventoSeleccionado[1]
 
     query = "select Equipo.nombre, Participacion.edad, medalla, id_deportista, id_evento, Participacion.id_equipo from" \
-            " Participacion, Equipo where id_evento = '" + idEvento + "' and id_deportista = '"+ idDeportista + "' and Participacion.id_equipo = Equipo.id_equipo;"
+            " Participacion, Equipo where id_evento = '" + idEvento + "' and id_deportista = '" + idDeportista + "' and Participacion.id_equipo = Equipo.id_equipo;"
     cursor.execute(query)
 
     participaciones = {}
@@ -432,5 +497,4 @@ def eliminarParticipacion():
     conectordb.commit()
     cursor.close()
     conectordb.close()
-    menu()
-
+menu()
