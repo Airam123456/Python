@@ -87,7 +87,7 @@ def menu():
 
 
 
-engine = create_engine('mysql+pymysql://admin:password@localhost/olimpiadas', echo=True)
+engine = create_engine('mysql+pymysql://admin:password@localhost/olimpiadas')
 # Base.metadata.create_all(engine)
 #Session = sessionmaker(bind=engine)
 #session = Session()
@@ -115,8 +115,8 @@ def listarDeportistasParticipantes():
     ediciones = {}
     contEdicion = 0
     for row in cursor:
-        print("\nEscribe " + str(contEdicion) + " para seleccionar:\n\t-Edición Olímpica:" + str(row.nombre))
-        ediciones[contEdicion] = (row.nombre, row.id_olimpiada)
+        print("\nEscribe " + str(contEdicion) + " para seleccionar:\n\t-Edición Olímpica: " + str(row.nombre))
+        ediciones[contEdicion] = row
         contEdicion += 1
 
     numEdicion = int(input("\nNúmero de la edición deseada:"))
@@ -126,26 +126,46 @@ def listarDeportistasParticipantes():
     edicionSeleccionada = ediciones[numEdicion]
     print("##################################################")
 
-
-    query = "select Deporte.nombre, Deporte.id_deporte from Evento, Deporte where Evento.id_deporte = Deporte.id_deporte and '" + str(
-        edicionSeleccionada[1]) + "' = id_olimpiada group by Deporte.id_deporte;"
-    cursor.execute(query)
-
-    cursor = session.query
+    #Seleccionamos deportes distintos
+    deportes_dist = {}
+    for evento in edicionSeleccionada.eventos:
+        if not evento.deporte.id_deporte in deportes_dist:
+            deportes_dist[evento.deporte.id_deporte] = evento.deporte
 
     deportes = {}
     contDeporte = 0
-    for row in cursor:
-        print("\nEscribe " + str(contDeporte) + " para seleccionar:\n\t-Deporte:" + str(row[0]))
-        deportes[contDeporte] = (row[0], row[1])
+    for row in deportes_dist.values():
+        print("\nEscribe " + str(contDeporte) + " para seleccionar:\n\t-Deporte:" + str(row.nombre))
+        deportes[contDeporte] = row
         contDeporte += 1
 
-    numDeporte = int(input("\nNumero del deporte deseado:"))
+    numDeporte = int(input("\nNumero del deporte deseado: "))
     while (numDeporte < 0 or numDeporte > contDeporte - 1):
         numDeporte = int(input("\nNúmero del deporte erroneo, introduzca uno correcto:"))
 
     deporteSelecionado = deportes[numDeporte]
     print("##################################################")
+
+    eventos = {}
+    contEvento = 0
+    for evento in edicionSeleccionada.eventos:
+        if evento.deporte.id_deporte  == deporteSelecionado.id_deporte:
+            print("\nEscribe " + str(contEvento) + " para seleccionar:\n\t-Evento:" + str(evento.nombre))
+            eventos[contEvento] = evento
+            contEvento += 1
+
+    numEvento = int(input("\nNumero del evento deseado:"))
+    while (numEvento < 0 or numEvento > contEvento - 1):
+        numEvento = int(input("\nNúmero del evento erroneo, introduzca uno correcto:"))
+
+    eventoSeleccionado = eventos[numEvento]
+
+    for par in eventoSeleccionado.participaciones:
+        print(par.deportista.nombre)
+
+
+
+#    print(deportes)
 '''
     query = "select nombre, id_evento from Evento where '" + str(deporteSelecionado[1]) + "' = id_deporte and '" + str(
         edicionSeleccionada[1]) + "' = id_olimpiada;"
