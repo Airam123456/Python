@@ -225,28 +225,20 @@ def modificarMedalla():
     menu()
 
 def aniadirDeporParti():
-    conectordb = mysql.connector.connect(
-        host="127.0.0.1",
-        user="admin",
-        password="password",
-        database="olimpiadas")
 
-    cursor = conectordb.cursor()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-    deportista = input("Introduce nombre del deportista a buscar:\n")
-    query = "select nombre, id_deportista from Deportista"
-    cursor.execute(query)
+    nombre = input("Introduce nombre del deportista a buscar:\n")
+    buscar_desportista = session.query(Deportista).filter(Deportista.nombre.like("%" + nombre + "%"))
+
 
     deportistas = {}
     contDeportista = 0
-    for row in cursor:
-        # El uso del contains lo vi buscando por internet, y lo uso para buscar buscar el nombre seleccionado
-        if (row[0].upper().__contains__(deportista.upper())):
-            deportistas[contDeportista] = (row[0], row[1])
-            print("\nEscribe " + str(contDeportista) + " para seleccionar: \n\t-Deportista: " + str(row[0]))
-            contDeportista += 1
-
-    # ADVERTENCIA!!! A partir de este punto la maquina virtual que usaba para ejecutar la base de datos dejor de funcionar asi que no pude comprobar si lo que hacia era correcto
+    for deportista in buscar_desportista:
+        deportistas[contDeportista] = deportista
+        print("\nEscribe " + str(contDeportista) + " para seleccionar:\n\t" + deportista.nombre)
+        contDeportista += 1
 
     if contDeportista == 0:
         # Si el deportista no existe lo creamos
@@ -267,9 +259,10 @@ def aniadirDeporParti():
                 input("\nla altura no puede ser menor de 0 ni mayor de 300.\nIntroduce altura del nuevo deportista: "))
 
         # creo que aqui no tengo que poner el id del deportista porque eso lo hace el autoincrement
-        query = "insert into Deportista (nombre, sexo, peso, altura) values (%s,%s,%s,%s);"
-        cursor.execute(query(deportista, sexo, peso, altura))
-        conectordb.commit()
+        nuevoDeportista = Deportista(nombre=nombre, sexo=sexo, peso=peso, altura=altura)
+        session.add(nuevoDeportista)
+        session.commit()
+
         print("Deportista insertado\n")
 
     else:
@@ -277,12 +270,13 @@ def aniadirDeporParti():
         while (numDeportista < 0 or numDeportista > contDeportista - 1):
             numDeportista = int(input("\nNúmero del deportista erroneo, introduzca uno correcto:"))
 
-        deportistaSelecionado = deportistas[numDeportista]
+        # deportistaSelecionado = deportistas[numDeportista]
 
-        idDeportista = deportistaSelecionado[1]
+        idDeportista = deportista.id_deportista
 
     print("##################################################")
 
+    #Seleccionamos temporada
     temporada = input("Introduce temporada Winter o Summer (W/S)\n")
     while (temporada.upper() != "W" and temporada.upper() != "S"):
         temporada = input("Valor introducido no permitido.\nIntroduce temporada Winter o Summer (W/S)\n")
@@ -291,52 +285,53 @@ def aniadirDeporParti():
     else:
         temporada = "Summer"
 
-    query = "select nombre, id_olimpiada from Olimpiada where Olimpiada.temporada = '" + temporada + "' order by nombre;"
-    cursor.execute(query)
+    #Hacemos la consulata con la que obtendremos toda la info
+    cursor = session.query(Olimpiada).filter(Olimpiada.temporada == temporada)
 
+    #Mostramos todas las ediciones del tipo de temporada seleccionada
     ediciones = {}
     contEdicion = 0
     for row in cursor:
-        print("\nEscribe " + str(contEdicion) + " para seleccionar:\n\t-Edición Olímpica:" + str(row[0]))
-        ediciones[contEdicion] = (row[0], row[1])
+        print("\nEscribe " + str(contEdicion) + " para seleccionar:\n\t-Edición Olímpica: " + str(row.nombre))
+        ediciones[contEdicion] = row
         contEdicion += 1
 
+    #Elegimos edicion
     numEdicion = int(input("\nNúmero de la edición deseada:"))
     while (numEdicion < 0 or numEdicion > contEdicion - 1):
         numEdicion = int(input("\nNúmero de la edición erroneo, introduzca uno correcto:"))
 
     edicionSeleccionada = ediciones[numEdicion]
-
     print("##################################################")
 
-    query = "select Deporte.nombre, Deporte.id_deporte from Evento, Deporte where Evento.id_deporte = Deporte.id_deporte and '" + str(
-        edicionSeleccionada[1]) + "' = id_olimpiada group by Deporte.id_deporte;"
-    cursor.execute(query)
+    # Seleccionamos deportes distintos
+    deportes_dist = {}
+    for evento in edicionSeleccionada.eventos:
+        if not evento.deporte.id_deporte in deportes_dist:
+            deportes_dist[evento.deporte.id_deporte] = evento.deporte
 
     deportes = {}
     contDeporte = 0
-    for row in cursor:
-        print("\nEscribe " + str(contDeporte) + " para seleccionar:\n\t-Deporte:" + str(row[0]))
-        deportes[contDeporte] = (row[0], row[1])
+    for row in deportes_dist.values():
+        print("\nEscribe " + str(contDeporte) + " para seleccionar:\n\t-Deporte:" + str(row.nombre))
+        deportes[contDeporte] = row
         contDeporte += 1
 
-    numDeporte = int(input("\nNumero del deporte deseado:"))
+    numDeporte = int(input("\nNumero del deporte deseado: "))
     while (numDeporte < 0 or numDeporte > contDeporte - 1):
         numDeporte = int(input("\nNúmero del deporte erroneo, introduzca uno correcto:"))
 
     deporteSelecionado = deportes[numDeporte]
-    print("##################################################")
 
-    query = "select nombre, id_evento from Evento where '" + str(deporteSelecionado[1]) + "' = id_deporte and '" + str(
-        edicionSeleccionada[1]) + "' = id_olimpiada;"
-    cursor.execute(query)
+    print("##################################################")
 
     eventos = {}
     contEvento = 0
-    for row in cursor:
-        print("\nEscribe " + str(contEvento) + " para seleccionar:\n\t-Evento: " + str(row[0]))
-        eventos[contEvento] = (row[0], row[1])
-        contEvento += 1
+    for evento in edicionSeleccionada.eventos:
+        if evento.deporte.id_deporte == deporteSelecionado.id_deporte:
+            print("\nEscribe " + str(contEvento) + " para seleccionar:\n\t-Evento:" + str(evento.nombre))
+            eventos[contEvento] = evento
+            contEvento += 1
 
     numEvento = int(input("\nNumero del evento deseado:"))
     while (numEvento < 0 or numEvento > contEvento - 1):
@@ -344,73 +339,69 @@ def aniadirDeporParti():
 
     eventoSeleccionado = eventos[numEvento]
 
-    # Aqui dejamos el id del Evento que necesitaremos para la insert
-    idEvento = eventoSeleccionado[1]
+    idEvento = evento.id_evento
 
-    medalla = input("Introduce la medalla del deportista, Bronze, Silver, Gold o NA: \n: ")
+    print("##################################################")
 
-    edad = int(input("Introduce edad del deportista en la participacion: "))
-    while (edad < 0 or edad > 100):
-        peso = int(input(
-            "\nLa edad no puede ser menor de 0 ni mayor de 100.\nIntroduce edad del deportista en la participacion: "))
 
-    # Informacion del equipo
-
-    query = "select nombre, id_equipo from Equipo;"
-    cursor.execute(query)
+    result_equipos = session.query(Equipo).all()
 
     equipos = {}
     contEquipo = 0
-    for row in cursor:
-        print("\nEscribe " + str(contEquipo) + " para seleccionar:\n\t-Evento: " + str(row[0]))
-        equipos[contEquipo] = (row[0], row[1])
+    for equipo in result_equipos:
+        equipos[contEquipo] = (equipo)
+        print("\nEscribe " + str(contEquipo) + " para seleccionar:\n\t" + str(equipo.nombre))
         contEquipo += 1
 
-    numEquipo = int(input("\nNúmero del equipo deseado: "))
-    while (numEquipo < 0 or numEvento > contEquipo - 1):
-        numEquipo = int(input("\nNúmero del equipo erroneo, introduzca uno correcto:"))
+    numEquipo = int(input("\nNumero del equipo deseado:"))
+    while (numEquipo < 0 or numEquipo > contEquipo - 1):
+        numEquipo = int(input("\nNúmero del evento erroneo, introduzca uno correcto:"))
 
-    equipoSelecionado = equipos[numEquipo]
+    idEquipo = equipo.id_equipo
 
-    idEquipo = equipoSelecionado[1]
 
-    # Insertamos participacion
+    nuevaParticipacion = Participacion(id_deportista=idDeportista, id_evento=idEvento, id_equipo=idEquipo, edad=None,
+                                       medalla=None)
 
-    query = "insert into Participacion (id_deportista, id_evento, id_equipo, edad, medalla) values (%s,%s,%s,%s,%s);"
-    cursor.execute(query(idDeportista, idEvento, idEquipo, edad, medalla))
-    conectordb.commit()
-    print("Participacion insertada\n")
+    session.add(nuevaParticipacion)
+    session.commit()
+    session.close()
 
-    cursor.close()
-    conectordb.close()
+    print("Insercion correcta")
+    print("##################################################\n")
     menu()
 
 
 def eliminarParticipacion():
-    conectordb = mysql.connector.connect(
-        host="127.0.0.1",
-        user="admin",
-        password="password",
-        database="olimpiadas")
 
-    cursor = conectordb.cursor()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-    deportista = input("Introduce nombre del deportista a buscar:\n")
-    query = "select nombre, id_deportista from Deportista"
-    cursor.execute(query)
-
-    deportista = input("Introduce nombre del deportista a buscar:\n")
-    query = "select nombre, id_deportista from Deportista"
-    cursor.execute(query)
+    nombre = input("Introduce nombre del deportista a buscar:\n")
+    buscar_desportista = session.query(Deportista).filter(Deportista.nombre.like("%" + nombre + "%"))
 
     deportistas = {}
     contDeportista = 0
-    for row in cursor:
-        # El uso del contains lo vi buscando por internet, y lo uso para buscar buscar el nombre seleccionado
-        if (row[0].upper().__contains__(deportista.upper())):
-            deportistas[contDeportista] = (row[0], row[1])
-            print("\nEscribe " + str(contDeportista) + " para seleccionar: \n\t-Deportista: " + str(row[0]))
+    for deportista in buscar_desportista:
+        deportistas[contDeportista] = deportista
+        print("\nEscribe " + str(contDeportista) + " para seleccionar:\n\t" + deportista.nombre)
+        contDeportista += 1
+
+    while contDeportista == 0:
+        print("Deportista no encontrado")
+
+        nombre = input("Introduce nombre del deportista a buscar:\n")
+        buscar_desportista = session.query(Deportista).filter(Deportista.nombre.like("%" + nombre + "%"))
+
+        deportistas = {}
+        contDeportista = 0
+        for deportista in buscar_desportista:
+            deportistas[contDeportista] = deportista
+            print("\nEscribe " + str(contDeportista) + " para seleccionar:\n\t" + deportista.nombre)
             contDeportista += 1
+
+
+
 
     numDeportista = int(input("\nNúmero del deportista deseado/a:"))
     while (numDeportista < 0 or numDeportista > contDeportista - 1):
@@ -418,62 +409,43 @@ def eliminarParticipacion():
 
     deportistaSelecionado = deportistas[numDeportista]
 
-    idDeportista = deportistaSelecionado[1]
 
     print("##################################################")
-    query = "select Evento.nombre, Evento.id_evento from Evento, Participacion where Evento.id_evento = Participacion.id_evento and '" + str(
-        idDeportista) + "' = Participacion.id_deportista;"
-    cursor.execute(query)
+
+    participacion = session.query(Participacion).filter(
+        Participacion.id_deportista == deportistaSelecionado.id_deportista)
 
     eventos = {}
     contEvento = 0
-    for row in cursor:
-        print("\nEscribe " + str(contEvento) + " para seleccionar:\n\t-Evento: " + str(row[0]))
-        eventos[contEvento] = (row[0], row[1])
+    for par in participacion:
+        eventos[contEvento] = par.evento
+        print("\nEscribe " + str(contEvento) + " para seleccionar:\n\t" + par.evento.nombre)
         contEvento += 1
 
-    numEvento = int(input("\nNumero del evento deseado:"))
+    numEvento = int(input("\nNúmero del evento deseado:"))
     while (numEvento < 0 or numEvento > contEvento - 1):
-        numEvento = int(input("\nNúmero del evento erroneo, introduzca uno correcto:"))
+        numEvento = int(input("\nNúmero del deportista erroneo, introduzca uno correcto:"))
 
     eventoSeleccionado = eventos[numEvento]
 
-    # Aqui dejamos el id del Evento que necesitaremos para la insert
-    idEvento = eventoSeleccionado[1]
 
-    query = "select Equipo.nombre, Participacion.edad, medalla, id_deportista, id_evento, Participacion.id_equipo from" \
-            " Participacion, Equipo where id_evento = '" + idEvento + "' and id_deportista = '" + idDeportista + "' and Participacion.id_equipo = Equipo.id_equipo;"
-    cursor.execute(query)
+    print("##################################################")
 
-    participaciones = {}
-    contParticipacion = 0
-    for row in cursor:
-        participaciones[contParticipacion] = (row[0], row[1], row[2], row[3], row[4], row[5])
-        print("\nEscribe " + str(contParticipacion) + " para seleccionar la participación jugada para el equipo:" + str(
-            row[0]) + "\n\t-Ganando la medalla: " + str(row[2]) + "\n\t-Con la edad: " + str(row[1]))
-        contParticipacion += 1
+    session.query(Participacion).filter(Participacion.id_deportista == deportistaSelecionado.id_deportista,
+                                        Participacion.id_evento == eventoSeleccionado.id_evento).delete()
 
-    numParticipacion = int(input("\nNúmero de la participacion deseada: "))
-    while (numParticipacion < 0 or numParticipacion > contParticipacion - 1):
-        numParticipacion = int(input("\nNúmero de participacion erroneo, introduzca uno correcto:"))
+    session.commit()
 
-    participacionSelecionada = participaciones[numParticipacion]
+    print("Participacion borrada")
 
-    idDeportista = participacionSelecionada[3]
-    idEvento = participacionSelecionada[4]
-    idEquipo = participacionSelecionada[5]
+    contador = session.query(Participacion).filter(Participacion.id_deportista == deportistaSelecionado.id_deportista).count()
 
-    query = "delete from Participacion where id_deportista = '" + idDeportista + "' and id_evento '" + idEvento + "' and id_equipo '" + idEquipo + "';"
-    cursor.execute(query)
-    print("Participacion eliminada correctamente")
+    if contador == 0:
+        session.query(Deportista).filter(Deportista.id_deportista == deportistaSelecionado.id_deportista).delete()
+        print("Deportista borrado")
+        session.commit()
 
-    if contParticipacion <= 1:
-        print("Como esta era la su unica participacion olimpica procederemos a borrarlo de la base")
-        query = "delete from Deportista where id_deportista = '" + + idDeportista + "';"
-        cursor.execute(query)
-        print("Deportista eliminado correctamente")
+    session.close()
+    menu()
 
-    conectordb.commit()
-    cursor.close()
-    conectordb.close()
 menu()

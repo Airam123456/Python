@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95b75cfe-df20-4a1a-bb79-155015169a1b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Tanda_4/PrincipalORM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tanda_4/ORM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_4/ORM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tanda_4/Prueba.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tanda_4/Prueba.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,8 +160,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.ORM" />
-        <item itemvalue="Python.BBDD" />
         <item itemvalue="Python.Prueba" />
+        <item itemvalue="Python.BBDD" />
         <item itemvalue="Python.Airam_Exam" />
         <item itemvalue="Python.BaCCes" />
       </list>

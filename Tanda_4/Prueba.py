@@ -164,7 +164,7 @@ class ORM:
 
         # Conectamos a la base de datos escogida
         if check == 1:
-            engine = create_engine("mysql://user:pwd@localhost/college", echo=True)
+            engine = create_engine('mysql+pymysql://admin:password@localhost/olimpiadas')
             #engine = create_engine("mysql://user:usuOlimpiadas/dm2", echo=True)
         elif check == 2:
             engine = create_engine('sqlite:///olimpiadas.db', echo=True)
