@@ -424,7 +424,7 @@ def eliminarParticipacion():
 
     numEvento = int(input("\nNúmero del evento deseado:"))
     while (numEvento < 0 or numEvento > contEvento - 1):
-        numEvento = int(input("\nNúmero del deportista erroneo, introduzca uno correcto:"))
+        numEvento = int(input("\nNúmero del evento erroneo, introduzca uno correcto:"))
 
     eventoSeleccionado = eventos[numEvento]
 
