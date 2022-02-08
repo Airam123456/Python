@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95b75cfe-df20-4a1a-bb79-155015169a1b" name="Changes" comment="" />
+    <list default="true" id="95b75cfe-df20-4a1a-bb79-155015169a1b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Exam4/Exam4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exam4/clientes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exam4/detallefacturas.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exam4/facturas.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exam4/productos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,11 +39,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tanda_3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Exam4" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Code With Me" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Exam4" />
       <recent name="$PROJECT_DIR$/Tanda_3" />
       <recent name="$PROJECT_DIR$/Exam" />
       <recent name="$PROJECT_DIR$" />
@@ -46,7 +54,7 @@
       <recent name="$PROJECT_DIR$/Tanda_3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ExistDB">
+  <component name="RunManager" selected="Python.Exam4">
     <configuration name="Airam_Exam (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,7 +76,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="BBDD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Exam4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,11 +84,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tanda_3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Exam4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tanda_3/BBDD.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Exam4/Exam4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,19 +139,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Prueba" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Scrapp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="TERM" value="xterm-color" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tanda_4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zPersonal" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tanda_4/Prueba.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zPersonal/Scrapp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,13 +161,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Airam_Exam (1)" />
+      <item itemvalue="Python.ExistDB" />
+      <item itemvalue="Python.ORM" />
+      <item itemvalue="Python.Scrapp" />
+      <item itemvalue="Python.Exam4" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Exam4" />
+        <item itemvalue="Python.Scrapp" />
         <item itemvalue="Python.ExistDB" />
         <item itemvalue="Python.Airam_Exam (1)" />
         <item itemvalue="Python.ORM" />
-        <item itemvalue="Python.Prueba" />
-        <item itemvalue="Python.BBDD" />
       </list>
     </recent_temporary>
   </component>
