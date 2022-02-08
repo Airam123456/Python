@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95b75cfe-df20-4a1a-bb79-155015169a1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Exam4/Exam4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exam4/clientes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exam4/detallefacturas.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exam4/facturas.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exam4/productos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ZZZPersonal/links.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZZZPersonal/YT.py" beforeDir="false" afterPath="$PROJECT_DIR$/ZZZPersonal/YT.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,7 @@
       <recent name="$PROJECT_DIR$/Tanda_3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Exam4">
+  <component name="RunManager" selected="Python.YT">
     <configuration name="Airam_Exam (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,27 +116,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Prueba" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tanda_4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tanda_4/Prueba.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Scrapp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,18 +138,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="YT" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ZZZPersonal" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ZZZPersonal/YT.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Airam_Exam (1)" />
-      <item itemvalue="Python.ExistDB" />
       <item itemvalue="Python.ORM" />
       <item itemvalue="Python.Scrapp" />
       <item itemvalue="Python.Exam4" />
+      <item itemvalue="Python.YT" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.YT" />
         <item itemvalue="Python.Exam4" />
         <item itemvalue="Python.Scrapp" />
-        <item itemvalue="Python.ExistDB" />
         <item itemvalue="Python.Airam_Exam (1)" />
         <item itemvalue="Python.ORM" />
       </list>
@@ -199,7 +197,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
