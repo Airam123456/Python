@@ -1,0 +1,1552 @@
+1644353201906	geckodriver	INFO	Listening on 127.0.0.1:32811
+1644353201943	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35855" "-no-remote" "-profile" "/tmp/rust_mozprofileg4QdHX"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644353208308	Marionette	INFO	Marionette enabled
+
+(firefox:26403): GLib-GIO-CRITICAL **: 21:46:48.983: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:26403): GLib-GIO-CRITICAL **: 21:46:48.998: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileg4QdHX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35855/devtools/browser/795ae5df-c977-424e-819d-df7752353fb3
+1644353225680	Marionette	INFO	Listening on port 38999
+1644353225990	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.ivoox.com/podcast-voz-horus-warhammer-40k_sq_f1394221_1.html, line 1453: ReferenceError: googletag is not defined
+JavaScript error: https://www.ivoox.com/podcast-voz-horus-warhammer-40k_sq_f1394221_1.html, line 2522: ReferenceError: googletag is not defined
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342254, line 97: unreachable code after return statement
+1644353306420	Marionette	INFO	Stopped listening on port 38999
+1644353311082	geckodriver	INFO	Listening on 127.0.0.1:60785
+1644353311126	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "43999" "-no-remote" "-profile" "/tmp/rust_mozprofileXrQno3"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644353317973	Marionette	INFO	Marionette enabled
+
+(firefox:26814): GLib-GIO-CRITICAL **: 21:48:38.540: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:26814): GLib-GIO-CRITICAL **: 21:48:38.540: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXrQno3/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43999/devtools/browser/e22eb30e-4709-42c4-b74d-03443dec86b5
+1644353333355	Marionette	INFO	Listening on port 40313
+1644353333555	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.ivoox.com/podcast-voz-horus-warhammer-40k_sq_f1394221_1.html, line 1453: ReferenceError: googletag is not defined
+JavaScript error: https://www.ivoox.com/podcast-voz-horus-warhammer-40k_sq_f1394221_1.html, line 2522: ReferenceError: googletag is not defined
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+console.warn: "Async method failed in safeAsyncMethod" (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967298/customhighlighter93, type show failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\nshow@resource://devtools/client/fronts/highlighters.js:27:18\nexports.safeAsyncMethod/<@resource://devtools/shared/async-utils.js:61:25\nshowHighlighterTypeForNode@resource://devtools/client/inspector/shared/highlighters-overlay.js:581:23\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.warn: "Async method failed in safeAsyncMethod" (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967298/customhighlighter93, type hide failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\nhide@resource://devtools/client/fronts/highlighters.js:32:18\nexports.safeAsyncMethod/<@resource://devtools/shared/async-utils.js:61:25\nhideHighlighterType@resource://devtools/client/inspector/shared/highlighters-overlay.js:640:23\nexports.safeAsyncMethod/<@resource://devtools/shared/async-utils.js:61:25\n_hideBoxModel@resource://devtools/client/inspector/markup/markup.js:731:40\n_onMouseOut@resource://devtools/client/inspector/markup/markup.js:699:16\n", "resource://devtools/shared/protocol/Front.js", 106))
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644353574949	Marionette	INFO	Stopped listening on port 40313
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644353731007	geckodriver	INFO	Listening on 127.0.0.1:34601
+1644353731128	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "36363" "-no-remote" "-profile" "/tmp/rust_mozprofiles4J9jQ"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644353737765	Marionette	INFO	Marionette enabled
+
+(firefox:27610): GLib-GIO-CRITICAL **: 21:55:38.367: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:27610): GLib-GIO-CRITICAL **: 21:55:38.367: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiles4J9jQ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36363/devtools/browser/86c0be20-ec69-4748-a73f-0e1b6792bfcc
+1644353753316	Marionette	INFO	Listening on port 41197
+1644353753678	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 4857 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2679 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6860 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 1072 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 154 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644353964164	Marionette	INFO	Stopped listening on port 41197
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1644353987860	geckodriver	INFO	Listening on 127.0.0.1:39931
+1644353987979	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "55001" "-no-remote" "-profile" "/tmp/rust_mozprofileM08mbH"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644353994249	Marionette	INFO	Marionette enabled
+
+(firefox:27891): GLib-GIO-CRITICAL **: 21:59:54.967: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:27891): GLib-GIO-CRITICAL **: 21:59:54.968: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileM08mbH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55001/devtools/browser/e1f86f2d-02c7-4d8b-84f7-5a321c7f0454
+1644354017238	Marionette	INFO	Listening on port 33863
+1644354017431	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342293, line 97: unreachable code after return statement
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644354296119	Marionette	INFO	Stopped listening on port 33863
+console.warn: services.settings: security-state/onecrl sync interrupted by shutdown
+1644354301583	geckodriver	INFO	Listening on 127.0.0.1:45975
+1644354301621	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41487" "-no-remote" "-profile" "/tmp/rust_mozprofile9WawYm"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644354307491	Marionette	INFO	Marionette enabled
+
+(firefox:28191): GLib-GIO-CRITICAL **: 22:05:08.060: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:28191): GLib-GIO-CRITICAL **: 22:05:08.061: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9WawYm/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41487/devtools/browser/acc85bcd-91d6-4c92-91fe-965da96d26a2
+1644354322433	Marionette	INFO	Listening on port 42179
+1644354322628	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+1644354570923	Marionette	INFO	Stopped listening on port 42179
+1644354647611	geckodriver	INFO	Listening on 127.0.0.1:39947
+1644354647657	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33175" "-no-remote" "-profile" "/tmp/rust_mozprofile44b2te"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644354653647	Marionette	INFO	Marionette enabled
+
+(firefox:30708): GLib-GIO-CRITICAL **: 22:10:54.235: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:30708): GLib-GIO-CRITICAL **: 22:10:54.235: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile44b2te/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33175/devtools/browser/451c5030-9fd4-4f1b-804d-08ba161d171f
+1644354669135	Marionette	INFO	Listening on port 33789
+1644354669396	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342254, line 97: unreachable code after return statement
+1644354752315	Marionette	INFO	Stopped listening on port 33789
+1644354903816	geckodriver	INFO	Listening on 127.0.0.1:40507
+1644354903848	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34879" "-no-remote" "-profile" "/tmp/rust_mozprofileqoyNCs"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644354909842	Marionette	INFO	Marionette enabled
+
+(firefox:31447): GLib-GIO-CRITICAL **: 22:15:10.449: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:31447): GLib-GIO-CRITICAL **: 22:15:10.450: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileqoyNCs/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:34879/devtools/browser/aae426f4-f2e2-40f8-9eee-ea634a13f160
+1644354925458	Marionette	INFO	Listening on port 38073
+1644354925650	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+1644355029088	geckodriver	INFO	Listening on 127.0.0.1:37083
+1644355029125	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "45397" "-no-remote" "-profile" "/tmp/rust_mozprofileXPRS17"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644355035819	Marionette	INFO	Marionette enabled
+
+(firefox:31823): GLib-GIO-CRITICAL **: 22:17:16.431: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:31823): GLib-GIO-CRITICAL **: 22:17:16.432: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXPRS17/search.json.mozlz4", (void 0)))
+1644355046867	Marionette	INFO	Stopped listening on port 38073
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+DevTools listening on ws://localhost:45397/devtools/browser/18cd284b-8dff-4182-b8aa-e0974adf6d22
+1644355053290	Marionette	INFO	Listening on port 43367
+1644355053543	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342293, line 97: unreachable code after return statement
+1644355229449	Marionette	INFO	Stopped listening on port 43367
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1644355234456	geckodriver	INFO	Listening on 127.0.0.1:51937
+1644355234584	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47841" "-no-remote" "-profile" "/tmp/rust_mozprofileXLS3hu"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644355243433	Marionette	INFO	Marionette enabled
+
+(firefox:32236): GLib-GIO-CRITICAL **: 22:20:44.053: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:32236): GLib-GIO-CRITICAL **: 22:20:44.053: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXLS3hu/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:47841/devtools/browser/613ca5ab-4091-444f-83d0-2382a88eb8f9
+1644355259001	Marionette	INFO	Listening on port 43773
+1644355259240	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+1644355462074	Marionette	INFO	Stopped listening on port 43773
+1644355466091	geckodriver	INFO	Listening on 127.0.0.1:58373
+1644355466120	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41583" "-no-remote" "-profile" "/tmp/rust_mozprofileEQKYdd"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644355472142	Marionette	INFO	Marionette enabled
+
+(firefox:32652): GLib-GIO-CRITICAL **: 22:24:32.724: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:32652): GLib-GIO-CRITICAL **: 22:24:32.725: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEQKYdd/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41583/devtools/browser/d9b593e4-9111-4624-b06c-b876b6198590
+1644355488114	Marionette	INFO	Listening on port 39765
+1644355488316	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+1644355672382	Marionette	INFO	Stopped listening on port 39765
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1644355679931	geckodriver	INFO	Listening on 127.0.0.1:56333
+1644355679963	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "37163" "-no-remote" "-profile" "/tmp/rust_mozprofileMU7iOz"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644355686423	Marionette	INFO	Marionette enabled
+
+(firefox:33049): GLib-GIO-CRITICAL **: 22:28:07.055: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:33049): GLib-GIO-CRITICAL **: 22:28:07.070: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMU7iOz/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:37163/devtools/browser/e6a7babe-232d-4b90-9ef1-5639d53497e0
+1644355702394	Marionette	INFO	Listening on port 42641
+1644355702576	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342293, line 97: unreachable code after return statement
+1644355824423	Marionette	INFO	Stopped listening on port 42641
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1644355912401	geckodriver	INFO	Listening on 127.0.0.1:43683
+1644355912437	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56279" "-no-remote" "-profile" "/tmp/rust_mozprofileIxDUGA"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644355918208	Marionette	INFO	Marionette enabled
+
+(firefox:33459): GLib-GIO-CRITICAL **: 22:31:58.783: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:33459): GLib-GIO-CRITICAL **: 22:31:58.783: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileIxDUGA/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56279/devtools/browser/382567db-6bc2-4a8b-a973-a7ad35f341d9
+1644355934641	Marionette	INFO	Listening on port 45411
+1644355934867	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342293, line 97: unreachable code after return statement
+1644356097044	Marionette	INFO	Stopped listening on port 45411
+1644356101823	geckodriver	INFO	Listening on 127.0.0.1:40509
+1644356101860	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48911" "-no-remote" "-profile" "/tmp/rust_mozprofilePDRova"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644356107930	Marionette	INFO	Marionette enabled
+
+(firefox:33700): GLib-GIO-CRITICAL **: 22:35:08.548: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:33700): GLib-GIO-CRITICAL **: 22:35:08.550: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilePDRova/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:48911/devtools/browser/778f510a-218d-417f-ac52-3bff472eea23
+1644356123575	Marionette	INFO	Listening on port 35495
+1644356123780	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342254, line 97: unreachable code after return statement
+1644356201048	Marionette	INFO	Stopped listening on port 35495
+1644356792662	geckodriver	INFO	Listening on 127.0.0.1:59339
+1644356792781	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "60295" "-no-remote" "-profile" "/tmp/rust_mozprofile1MlSk3"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644356804301	Marionette	INFO	Marionette enabled
+
+(firefox:34625): GLib-GIO-CRITICAL **: 22:46:45.908: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:34625): GLib-GIO-CRITICAL **: 22:46:45.914: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile1MlSk3/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60295/devtools/browser/0490bb48-9a15-4c97-a3ba-4dc252cb5300
+1644356826750	Marionette	INFO	Listening on port 41363
+1644356827030	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644357063622	Marionette	INFO	Stopped listening on port 41363
+1644357068266	geckodriver	INFO	Listening on 127.0.0.1:41827
+1644357068300	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56511" "-no-remote" "-profile" "/tmp/rust_mozprofileN2GLfN"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644357074707	Marionette	INFO	Marionette enabled
+
+(firefox:35072): GLib-GIO-CRITICAL **: 22:51:15.321: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:35072): GLib-GIO-CRITICAL **: 22:51:15.322: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileN2GLfN/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56511/devtools/browser/1fa11717-e1ba-4eb3-b3b7-5dfa645b3d58
+1644357090315	Marionette	INFO	Listening on port 36359
+1644357090543	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342263, line 97: unreachable code after return statement
+1644357270718	Marionette	INFO	Stopped listening on port 36359
+1644357279181	geckodriver	INFO	Listening on 127.0.0.1:47927
+1644357279236	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33485" "-no-remote" "-profile" "/tmp/rust_mozprofilekcfJ4E"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644357286247	Marionette	INFO	Marionette enabled
+
+(firefox:35488): GLib-GIO-CRITICAL **: 22:54:46.938: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:35488): GLib-GIO-CRITICAL **: 22:54:46.939: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilekcfJ4E/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33485/devtools/browser/a642194c-6346-4a54-a3b3-74cd091834e9
+1644357302901	Marionette	INFO	Listening on port 43003
+1644357303077	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342263, line 97: unreachable code after return statement
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342263, line 97: unreachable code after return statement
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342263, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2208 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2142 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6972 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2235 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2140 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Handler function threw an exception: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannelInternal.remoteAddress]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/server/actors/network-monitor/network-observer.js :: _onResponseHeader :: line 1069"  data: no]
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1069:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:642:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:751:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1069, column: 0
+console.error: ({})
+Handler function threw an exception: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIHttpChannelInternal.remoteAddress]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/server/actors/network-monitor/network-observer.js :: _onResponseHeader :: line 1069"  data: no]
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1069:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:642:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:751:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1069, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+1644357536001	geckodriver	INFO	Listening on 127.0.0.1:36111
+1644357536076	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "45415" "-no-remote" "-profile" "/tmp/rust_mozprofileUzjnOK"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644357537701	Marionette	INFO	Stopped listening on port 43003
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644357548123	Marionette	INFO	Marionette enabled
+
+(firefox:35951): GLib-GIO-CRITICAL **: 22:59:08.740: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:35951): GLib-GIO-CRITICAL **: 22:59:08.741: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileUzjnOK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:45415/devtools/browser/94632a28-215b-46f9-b773-02815468c81b
+1644357563684	Marionette	INFO	Listening on port 37291
+1644357563915	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342254, line 97: unreachable code after return statement
+1644357600107	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:239:19
+TimedPromise@chrome://remote/content/marionette/sync.js:224:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://www.ivoox.com/lvdh-258-orden-rosa-ensangrentada-audios-mp3_rf_81789854_1.html, line 2: ReferenceError: downloadGroupingFunctions is not defined
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342254, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 4060 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 811 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 905 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+1644358178387	geckodriver	INFO	Listening on 127.0.0.1:38451
+1644358178504	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "45201" "-no-remote" "-profile" "/tmp/rust_mozprofilebP6Vsz"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644358183900	Marionette	INFO	Stopped listening on port 37291
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644358190063	Marionette	INFO	Marionette enabled
+
+(firefox:36431): GLib-GIO-CRITICAL **: 23:09:50.636: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:36431): GLib-GIO-CRITICAL **: 23:09:50.675: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilebP6Vsz/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:45201/devtools/browser/3f32be7e-1ddd-4146-ac8f-cbbe90966504
+1644358211249	Marionette	INFO	Listening on port 33103
+1644358211409	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342293, line 97: unreachable code after return statement
+JavaScript error: https://www.ivoox.com/lvdh-258-orden-rosa-ensangrentada-audios-mp3_rf_81789854_1.html, line 3513: ReferenceError: _gaq is not defined
+JavaScript error: https://www.ivoox.com/lvdh-258-orden-rosa-ensangrentada-audios-mp3_rf_81789854_1.html, line 3513: ReferenceError: _gaq is not defined
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1644358692342	Marionette	INFO	Stopped listening on port 33103
+1644358701449	geckodriver	INFO	Listening on 127.0.0.1:59547
+1644358701487	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48447" "-no-remote" "-profile" "/tmp/rust_mozprofileYnG5V3"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644358707403	Marionette	INFO	Marionette enabled
+
+(firefox:36850): GLib-GIO-CRITICAL **: 23:18:28.010: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:36850): GLib-GIO-CRITICAL **: 23:18:28.011: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYnG5V3/search.json.mozlz4", (void 0)))
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 503
+DevTools listening on ws://localhost:48447/devtools/browser/abd52a35-26b4-4260-bd3a-7af929b7d221
+1644358722791	Marionette	INFO	Listening on port 38479
+1644358723023	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 967 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 1240 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6246 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 202 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 5610 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644358846400	Marionette	INFO	Stopped listening on port 38479
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644358855831	geckodriver	INFO	Listening on 127.0.0.1:37267
+1644358855866	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47509" "-no-remote" "-profile" "/tmp/rust_mozprofileqGST5b"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644358861861	Marionette	INFO	Marionette enabled
+
+(firefox:37261): GLib-GIO-CRITICAL **: 23:21:02.472: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:37261): GLib-GIO-CRITICAL **: 23:21:02.473: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileqGST5b/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:47509/devtools/browser/78c2a02c-1dfa-4041-811f-d17db0d2561e
+1644358877459	Marionette	INFO	Listening on port 41993
+1644358877727	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+1644358958411	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:239:19
+TimedPromise@chrome://remote/content/marionette/sync.js:224:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 7597 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 1221 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 5700 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6909 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 3543 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644359746152	Marionette	INFO	Stopped listening on port 41993
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644359752534	geckodriver	INFO	Listening on 127.0.0.1:60949
+1644359752660	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33689" "-no-remote" "-profile" "/tmp/rust_mozprofilew0bV7G"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644359762159	Marionette	INFO	Marionette enabled
+
+(firefox:38164): GLib-GIO-CRITICAL **: 23:36:02.784: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:38164): GLib-GIO-CRITICAL **: 23:36:02.785: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilew0bV7G/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33689/devtools/browser/f3e76245-42b9-4b04-922f-5c36afd97bda
+1644359777931	Marionette	INFO	Listening on port 34285
+1644359778075	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 3953 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 1626 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 3360 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2098 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 7380 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644359890983	geckodriver	INFO	Listening on 127.0.0.1:50735
+1644359891019	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "45461" "-no-remote" "-profile" "/tmp/rust_mozprofileaHh93I"
+1644359892012	Marionette	INFO	Stopped listening on port 34285
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644359901935	Marionette	INFO	Marionette enabled
+
+(firefox:38390): GLib-GIO-CRITICAL **: 23:38:22.540: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:38390): GLib-GIO-CRITICAL **: 23:38:22.542: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileaHh93I/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:45461/devtools/browser/2c33b391-a313-4808-8288-ea18b28d4803
+1644359917390	Marionette	INFO	Listening on port 43919
+1644359917667	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342293, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6616 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6167 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 3235 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644360192673	Marionette	INFO	Stopped listening on port 43919
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.log: "RemoteSettingsWorker error: AbortError: IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort."
+console.error: services.settings: 
+  Message: TypeError: NetworkError: Network request failed
+  Stack:
+    fetch/</request.onerror@resource://services-settings/Utils.jsm:131:26
+observe@resource://gre/modules/AsyncShutdown.jsm:575:16
+
+console.warn: services.settings: security-state/onecrl sync interrupted by shutdown
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 996: Error: Connection is not open.
+1644360216443	geckodriver	INFO	Listening on 127.0.0.1:54235
+1644360216477	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "36977" "-no-remote" "-profile" "/tmp/rust_mozprofileVkoObd"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644360222658	Marionette	INFO	Marionette enabled
+
+(firefox:38654): GLib-GIO-CRITICAL **: 23:43:43.271: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:38654): GLib-GIO-CRITICAL **: 23:43:43.272: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileVkoObd/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36977/devtools/browser/70f092a0-3759-4770-84ac-bef210de6b8e
+1644360238054	Marionette	INFO	Listening on port 33347
+1644360238290	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2982 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 3402 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 7699 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2222 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6676 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644361439111	Marionette	INFO	Stopped listening on port 33347
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1644361657155	geckodriver	INFO	Listening on 127.0.0.1:50679
+1644361657254	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "49907" "-no-remote" "-profile" "/tmp/rust_mozprofilerQAv0H"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644361673404	Marionette	INFO	Marionette enabled
+
+(firefox:39473): GLib-GIO-CRITICAL **: 00:07:54.027: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:39473): GLib-GIO-CRITICAL **: 00:07:54.027: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerQAv0H/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49907/devtools/browser/bb7a1a60-a77f-43f6-9db8-e7bbd9167d75
+1644361688555	Marionette	INFO	Listening on port 41515
+1644361688787	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342254, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 3729 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 3181 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 3297 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2476 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644361979497	Marionette	INFO	Stopped listening on port 41515
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 996: Error: Connection is not open.
+1644362011599	geckodriver	INFO	Listening on 127.0.0.1:49415
+1644362011634	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41179" "-no-remote" "-profile" "/tmp/rust_mozprofile2hj66E"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644362017602	Marionette	INFO	Marionette enabled
+
+(firefox:39836): GLib-GIO-CRITICAL **: 00:13:38.214: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:39836): GLib-GIO-CRITICAL **: 00:13:38.215: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2hj66E/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41179/devtools/browser/1c4b06b0-b142-4d1f-8a6f-a122bef240af
+1644362033039	Marionette	INFO	Listening on port 36877
+1644362033214	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342293, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 4530 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 1394 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6080 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644362117487	Marionette	INFO	Stopped listening on port 36877
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A0078,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1644362489894	geckodriver	INFO	Listening on 127.0.0.1:37493
+1644362490461	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59281" "-no-remote" "-profile" "/tmp/rust_mozprofilerGqmOW"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644362497012	Marionette	INFO	Marionette enabled
+
+(firefox:40182): GLib-GIO-CRITICAL **: 00:21:37.636: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:40182): GLib-GIO-CRITICAL **: 00:21:37.637: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerGqmOW/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59281/devtools/browser/7250a0b5-2c15-42e2-a73e-e215aef88de1
+1644362512534	Marionette	INFO	Listening on port 34091
+1644362512728	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342254, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 7637 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6321 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644362598699	Marionette	INFO	Stopped listening on port 34091
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A0078,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644363847246	geckodriver	INFO	Listening on 127.0.0.1:53877
+1644363847292	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "32935" "-no-remote" "-profile" "/tmp/rust_mozprofileh2Gx0b"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644363853312	Marionette	INFO	Marionette enabled
+
+(firefox:40634): GLib-GIO-CRITICAL **: 00:44:13.920: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:40634): GLib-GIO-CRITICAL **: 00:44:13.921: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileh2Gx0b/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:32935/devtools/browser/31a6b562-93f4-4f92-b0c6-d7fd2eb0775c
+1644363870048	Marionette	INFO	Listening on port 37543
+1644363870202	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342293, line 97: unreachable code after return statement
+1644363940352	Marionette	INFO	Stopped listening on port 37543
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6D0014,name=PNecko::Msg_PredLearn) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0143,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6D0024,name=PNecko::Msg_RequestContextAfterDOMContentLoaded) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A0078,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5C0008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5C0008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3C0001,name=PCookieService::Msg_SetCookies) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5C0008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0143,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3C0001,name=PCookieService::Msg_SetCookies) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5C0008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3C0001,name=PCookieService::Msg_SetCookies) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5C0008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3C0001,name=PCookieService::Msg_SetCookies) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5C0008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0143,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0143,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644364306065	geckodriver	INFO	Listening on 127.0.0.1:39663
+1644364306595	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "55271" "-no-remote" "-profile" "/tmp/rust_mozprofile6QbVv7"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644364312838	Marionette	INFO	Marionette enabled
+
+(firefox:42546): GLib-GIO-CRITICAL **: 00:51:53.453: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:42546): GLib-GIO-CRITICAL **: 00:51:53.470: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6QbVv7/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55271/devtools/browser/a0fdf5e7-6444-4094-b908-a9c2e9e767e9
+1644364328425	Marionette	INFO	Listening on port 38355
+1644364328605	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342275, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 7735 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 7452 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 5063 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 7019 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644364411363	Marionette	INFO	Stopped listening on port 38355
+JavaScript error: , line 0: uncaught exception: 7
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5C0008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6D0014,name=PNecko::Msg_PredLearn) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A0078,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1644364546509	geckodriver	INFO	Listening on 127.0.0.1:35153
+1644364547025	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50073" "-no-remote" "-profile" "/tmp/rust_mozprofilermZUo6"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1644364553051	Marionette	INFO	Marionette enabled
+
+(firefox:43022): GLib-GIO-CRITICAL **: 00:55:53.692: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(firefox:43022): GLib-GIO-CRITICAL **: 00:55:53.692: g_dbus_proxy_new: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilermZUo6/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50073/devtools/browser/4691989e-0a93-45f8-bda2-906a0ec7dc7d
+1644364569083	Marionette	INFO	Listening on port 36613
+1644364569236	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static-1.ivoox.com/js/ivx-p.min.js?1644342254, line 97: unreachable code after return statement
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6110 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 2210 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wi15CXa8h7AfaunZlm4u5xWjD8ePEZy_mQ_gnQzqsAI.js line 1 > eval line 6060 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644364693877	Marionette	INFO	Stopped listening on port 36613
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014B,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A0078,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
